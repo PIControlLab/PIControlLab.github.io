@@ -85,6 +85,33 @@
                 {{ end }}
             </div>
         </section>
+
+        <!-- 已毕业学生 -->
+        <section class="team-section">
+            <h2>已毕业</h2>
+            <div class="team-members">
+                {{ range where .Pages "Params.role" "已毕业" }}
+                <div class="team-member">
+                    <div class="member-card">
+                        <!-- 头像显示 -->
+                        {{ if .Params.avatar }}
+                        <div class="member-avatar">
+                            <img src="{{ .Params.avatar | relURL }}" alt="{{ .Title }}">
+                        </div>
+                        {{ else }}
+                        <div class="member-avatar">
+                            <div class="avatar-placeholder">
+                                无头像
+                            </div>
+                        </div>
+                        {{ end }}
+                        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <p class="member-research">{{ .Params.research }}</p>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </section>
     </div>
 </div>
 {{ end }}
