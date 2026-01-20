@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>招聘启事 on GA-lab</title>
+    <link>http://localhost:1313/recruitment/</link>
+    <description>Recent content in 招聘启事 on GA-lab</description>
+    <generator>Hugo</generator>
+    <language>zh-us</language>
+    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/recruitment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>招聘博士后研究人员</title>
+      <link>http://localhost:1313/recruitment/doctor/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/recruitment/doctor/</guid>
+      <description>&lt;h2 id=&#34;课题组简介&#34;&gt;课题组简介&lt;/h2&gt;&#xA;&lt;p&gt;夏元清教授团队依托控制科学与工程一流学科和自主智能无人系统全国重点实验室，开展云控制与决策、天空地海跨域协同控制、多源信息融合与控制、机器人行为智能等领域研究，承担了国家重点研发计划、国家自然科学基金重点项目、重点项目等多层次科研项目多项，近年来围绕相关研究出版专著20余部，发表论文1000余篇。团队现有教职员工16人，含国家级人才4人。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
