@@ -1,0 +1,10 @@
+# Hugo build output
+public/
+
+# Hugo cache
+resources/
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
