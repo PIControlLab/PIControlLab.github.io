@@ -23,16 +23,16 @@ home = ["HTML", "RSS", "JSON"]
 [params]
   custom_css = ["css/custom.css"]
   header_image = "/img/1681122792748811.jpg"
-  banner_title = "通用智能体控制与决策实验室"
-  SEOTitle = "BIT通用智能体控制与决策实验室"
+  banner_title = "预测智能控制实验室"
+  SEOTitle = "BIT预测智能控制实验室"
   description = "这里是北京理工大学自动化学院通用智能体控制与决策实验室，欢迎前来交流。"
-  keyword = "BIT, 北京理工大学, 北理工自动化学院 , GA-lab, 协同智能体通用探索实验室, 实验室,Generalized Agents Control and Decision Lab"
-  slogan = "Generalized Agents Control and Decision Lab"
+  keyword = "BIT, 北京理工大学, 北理工自动化学院 , PI-Control lab, 预测智能控制实验室, 实验室,Predictive Intelligence Control Lab"
+  slogan = "Predictive Intelligence Control Lab"
   upstreamAttribution = true
 
   local_search = true
 
-  contact = "samyasa@qq.com"
+  contact = "PIControlLab@163.com"
   icp = "京ICP备12345678号"
   image_404 = "img/404-bg.jpg"
   title_404 = "你来到了没有知识的荒原 :("
