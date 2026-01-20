@@ -32,4 +32,3 @@ jobs:
           publish_dir: ./public
           publish_branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          force_orphan: true
