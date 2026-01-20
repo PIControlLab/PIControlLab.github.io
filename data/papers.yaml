@@ -1,0 +1,347 @@
+- title: "Robust Economic MPC for Perturbed Autonomous Electric Vehicles With Variable Space Constraints"
+  authors: ["Q. Li", "L. Dai", "T. Zhou", "Z. Sun", "Y. Xia"]
+  year: 2025
+  venue: "IEEE Transactions on Automation Science and Engineering"
+  type: "journal"
+
+- title: "Dual-Scale Attention Networks for Efficient Monocular Depth Estimation"
+  authors: ["Z. He", "Z. Sun", "J. Yang", "C. Du", "Y. Xia"]
+  year: 2025
+  venue: "CCC"
+  type: "conference"
+
+- title: "Multimodal Trajectory Prediction with Intention Recognition and Learnable Path Queries"
+  authors: ["J. Yang", "Z. Sun", "Z. He", "C. Du", "Y. Xia"]
+  year: 2025
+  venue: "CCC"
+  type: "conference"
+
+- title: "Trajectory Tracking and Real-Time Obstacle Avoidance for Differentially Flat UAV Under Disturbances and Measurement Noises"
+  authors: ["X. Kong", "Y. Xia", "Z. Sun", "S. Zhang", "W. Ning"]
+  year: 2025
+  venue: "IEEE Transactions on Aerospace and Electronic Systems"
+  type: "journal"
+
+- title: "Hierarchical Economic Model Predictive Control for Eco-Driving of Electric Vehicles"
+  authors: ["Q. Li", "L. Dai", "Z. Sun", "Y. Xia"]
+  year: 2025
+  venue: "IEEE Transactions on Intelligent Transportation Systems"
+  type: "journal"
+
+- title: "Convex MPC With Unreachable Setpoint for a Class of Affine System"
+  authors: ["Y. Deng", "Y. Xia", "Z. Sun", "Y. Zhang", "J. Wu", "X. Kong"]
+  year: 2025
+  venue: "IEEE Robotics and Automation Letters"
+  type: "journal"
+
+- title: "Differential High Order Control Barrier Function-Based Safe Reinforcement Learning"
+  authors: ["X. Kong", "Y. Xia", "Z. Sun", "D. -H. Zhai", "Y. Deng", "S. Zhang"]
+  year: 2025
+  venue: "IEEE Robotics and Automation Letters"
+  type: "journal"
+
+- title: "Distributed Cloud Model Predictive Control With Delay Compensation for Heterogeneous Vehicle Platoons"
+  authors: ["J. Zhao", "Y. Ma", "L. Dai", "Z. Sun", "H. Chen", "Y. Xia"]
+  year: 2025
+  venue: "IEEE Transactions on Vehicular Technology"
+  type: "journal"
+
+- title: "Prescribed-Time Trajectory Tracking Control for Quadrotor Without Velocity Measurement"
+  authors: ["T. Wang", "W. Ning", "Z. Sun", "Y. Xia"]
+  year: 
+  venue: "IEEE/ASME Transactions on Mechatronics"
+  type: "journal"
+
+- title: "MPC for Linear Systems With Concave Inequality Constraints and Convexification Loss Analysis"
+  authors: ["Y. Deng", "Y. Xia", "Z. Sun", "C. Li", "R. Hu"]
+  year: 2025
+  venue: "IEEE Transactions on Automatic Control"
+  type: "journal"
+
+- title: "Event-Triggered Formation Control of Unknown Autonomous Underwater Vehicles Subject to Arbitrarily Large Time-Varying Communication Delays"
+  authors: ["W. Zhao", "Y. Xia", "D. -H. Zhai", "Z. Sun", "Y. Zhang"]
+  year: 2025
+  venue: "IEEE Transactions on Vehicular Technology"
+  type: "journal"
+
+- title: "Distributed Model Predictive Control of Connected and Automated Vehicles With Markov Packet Loss"
+  authors: ["Y. Bian"]
+  year: 2025
+  venue: "IEEE Transactions on Transportation Electrification"
+  type: "journal"
+
+- title: "Weak Loss Convexification for Sequential Convex Programming"
+  authors: ["Y. Deng", "Y. Xia", "Z. Sun", "C. Li", "R. Hu"]
+  year: 2025
+  venue: "IEEE Transactions on Aerospace and Electronic Systems"
+  type: "journal"
+
+- title: "Economic MPC With Adaptive Sampling and Offset-Free Operation for Perturbed Autonomous Electric Vehicles"
+  authors: ["Q. Li", "L. Dai", "T. Zhou", "H. Yang", "Z. Sun", "Y. Xia"]
+  year: 2025
+  venue: "IEEE Transactions on Transportation Electrification"
+  type: "journal"
+
+- title: "Compound Learning-Based Model Predictive Control Approach for Ducted-Fan Aerial Vehicles"
+  authors: ["T. Manzoor", "H. Pei", "Y. Xia", "Z. Sun", "Y. Ali"]
+  year: 2025
+  venue: "IEEE Transactions on Neural Networks and Learning Systems"
+  type: "journal"
+
+- title: "Distributed MPC for Cooperative Tracking Periodic References of Heterogeneous Systems"
+  authors: ["Y. Deng", "Y. Xia", "Z. Sun", "L. Dai", "B. Cui"]
+  year: 2025
+  venue: "IEEE Transactions on Automation Science and Engineering"
+  type: "journal"
+
+- title: "Zero-Norm Distance to Controllability of Linear Dynamic Networks"
+  authors: ["Y. Zhang", "Y. Xia", "Y. Zhan", "Z. Sun"]
+  year: 2024
+  venue: "IEEE Transactions on Cybernetics"
+  type: "journal"
+
+- title: "Wavelet Decomposition Self-Supervised Neural Networks for Traffic Flow Forecasting"
+  authors: ["Y. Li", "Z. Sun", "C. Du", "Z. Jiang", "Y. Xia"]
+  year: 2024
+  venue: "CCC"
+  type: "conference"
+
+- title: "A Supervisory Control Approach for Mars Exploration System"
+  authors: ["Q. Cao", "H. Yang", "L. Yang", "C. Du", "Z. Sun", "H. Liu"]
+  year: 2024
+  venue: "CCC"
+  type: "conference"
+
+- title: "Cloud-Edge Cooperative Distributed MPC With Event-Triggered Switching Strategy for Heterogeneous Vehicle Platoon"
+  authors: ["J. Zhao", "Y. Ma", "L. Dai", "Z. Sun", "Y. Xia"]
+  year: 2024
+  venue: "IEEE Transactions on Vehicular Technology"
+  type: "journal"
+
+- title: "Adaptive High-Order Control Barrier Function-Based Iterative LQR for Real Time Safety-Critical Motion Planning"
+  authors: ["X. Kong", "W. Ning", "Y. Xia", "Z. Sun", "H. Xie"]
+  year: 2024
+  venue: "IEEE Robotics and Automation Letters"
+  type: "journal"
+
+- title: "Dynamic View Aggregation for Multi-View 3D Shape Recognition"
+  authors: ["Y. Zhou", "Z. Sun", "S. Huo", "S. -Y. Kung"]
+  year: 2024
+  venue: "IEEE Transactions on Multimedia"
+  type: "journal"
+
+- title: "Stabilization of Linear Systems With Time Delay and Disturbance: A New State Prediction Approach"
+  authors: ["K. Zhao", "J. Zhang", "Z. Sun", "D. Chen"]
+  year: 2024
+  venue: "IEEE Transactions on Automatic Control"
+  type: "journal"
+
+- title: "Adaptive Receding Horizon-Based Self-Triggered Constrained SMC"
+  authors: ["H. Meng", "J. Zhang", "S. Li", "Z. Sun"]
+  year: 2024
+  venue: "IEEE Transactions on Circuits and Systems II: Express Briefs"
+  type: "journal"
+
+- title: "Reinforcement Learning-Based Model Predictive Control for Discrete-Time Systems"
+  authors: ["M. Lin", "Z. Sun", "Y. Xia", "J. Zhang"]
+  year: 2024
+  venue: "IEEE Transactions on Neural Networks and Learning Systems"
+  type: "journal"
+
+- title: "Behavioral Cloning Based Model Generation Method for Reinforcement Learning"
+  authors: ["D. Xiao", "B. Wang", "Z. Sun", "X. He"]
+  year: 2023
+  venue: "CAC"
+  type: "conference"
+
+- title: "Imitation Learning Method of Multi-quality Expert Data Based on GAIL"
+  authors: ["D. Xiao", "B. Wang", "Z. Sun", "X. He"]
+  year: 2023
+  venue: "CAC"
+  type: "conference"
+
+- title: "Model Predictive Control for Three-Intersection Traffic Control Including Bus-Only Lanes"
+  authors: ["Z. Huang", "L. Dai", "S. Lin", "Z. Sun", "Y. Zhan", "Y. Xia"]
+  year: 2023
+  venue: "CAC"
+  type: "conference"
+
+- title: "A Fast Frequency Active Support Control Strategy for Multiple Wind Farms and Energy Storage"
+  authors: ["S. Zhu", "Y. Tao", "L. Chen", "D. Sun", "G. Li", "Z. Sun"]
+  year: 2023
+  venue: "PEAS"
+  type: "conference"
+
+- title: "Full-Dimensional Collision Avoidance of Autonomous Vehicles Using Sequence Convex Programming"
+  authors: ["Y. Wang", "Z. Sun", "Y. Dang", "M. Lin", "C. Li", "Y. Xia"]
+  year: 2023
+  venue: "CCC"
+  type: "conference"
+
+- title: "Workflow-Based Fast Model Predictive Cloud Control Method for Vehicle Kinematics Trajectory Tracking Problem"
+  authors: ["T. Zhou", "R. Gao", "Z. Sun", "Y. Zhan", "L. Dai", "Y. Xia"]
+  year: 2023
+  venue: "IEEE Transactions on Vehicular Technology"
+  type: "journal"
+
+- title: "Event-Based Wireless Tracking Control for a Wheeled Mobile Robot Against Reactive Jamming Attacks"
+  authors: ["H. Xu", "J. Zhang", "Z. Sun", "H. Yang"]
+  year: 2023
+  venue: "IEEE Transactions on Control of Network Systems"
+  type: "journal"
+
+- title: "Maximal Admissible Disturbance Constraint Set for Tube-Based Model Predictive Control"
+  authors: ["H. Xie", "L. Dai", "Z. Sun", "Y. Xia"]
+  year: 2023
+  venue: "IEEE Transactions on Automatic Control"
+  type: "journal"
+
+- title: "Distributed Economic MPC for Dynamically Coupled Linear Systems: A Lyapunov-Based Approach"
+  authors: ["L. Dai", "T. Zhou", "Z. Qiang", "Z. Sun", "Y. Xia"]
+  year: 2023
+  venue: "IEEE Transactions on Systems, Man, and Cybernetics: Systems"
+  type: "journal"
+
+- title: "Event-triggered Output Consensus Control of the Disturbed Heterogeneous MASs with Sliding-mode Observer"
+  authors: ["H. Liu", "C. Du", "N. Li", "Z. Sun"]
+  year: 2022
+  venue: "YAC"
+  type: "conference"
+
+- title: "Model Predictive Control of Autonomous Vehicles Using Sequence Convex Programming"
+  authors: ["H. Wang", "Z. Sun", "Y. Deng", "Y. Xia"]
+  year: 2022
+  venue: "YAC"
+  type: "conference"
+
+- title: "Design and implementation of data-driven predictive cloud control system"
+  authors: ["R. Gao", "Y. Xia", "L. Dai", "Z. Sun", "Y. Zhan"]
+  year: 2022
+  venue: "Journal of Systems Engineering and Electronics"
+  type: "journal"
+
+- title: "Observer-based Finite-time Platoon Control for Connected Vehicles"
+  authors: ["C. Du", "H. Liu", "N. Li", "Y. Bian", "H. Hu", "Z. Sun"]
+  year: 2022
+  venue: "CVCI"
+  type: "conference"
+
+- title: "Data-Driven MPC for Nonlinear Systems with Reinforcement Learning"
+  authors: ["Y. Li", "Q. Wang", "Z. Sun", "Y. Xia"]
+  year: 2022
+  venue: "CCC"
+  type: "conference"
+
+- title: "A Multilayer Graph for Multiagent Formation and Trajectory Tracking Control Based on MPC Algorithm"
+  authors: ["Z. Pan", "Z. Sun", "H. Deng", "D. Li"]
+  year: 2022
+  venue: "IEEE Transactions on Cybernetics"
+  type: "journal"
+
+- title: "Dynamic Event-Triggered MPC With Shrinking Prediction Horizon and Without Terminal Constraint"
+  authors: ["Z. Sun", "C. Li", "J. Zhang", "Y. Xia"]
+  year: 2022
+  venue: "IEEE Transactions on Cybernetics"
+  type: "journal"
+
+- title: "Fixed-Time Cooperative Behavioral Control for Networked Autonomous Agents With Second-Order Nonlinear Dynamics"
+  authors: ["N. Zhou", "X. Cheng", "Z. Sun", "Y. Xia"]
+  year: 2022
+  venue: "IEEE Transactions on Cybernetics"
+  type: "journal"
+
+- title: "Distributed Economic MPC for Dynamically Coupled Linear Systems With Uncertainties"
+  authors: ["L. Dai", "Z. Qiang", "Z. Sun", "T. Zhou", "Y. Xia"]
+  year: 2022
+  venue: "IEEE Transactions on Cybernetics"
+  type: "journal"
+
+- title: "Data-Driven MPC for Linear Systems using Reinforcement Learning"
+  authors: ["Z. Sun", "Q. Wang", "J. Pan", "Y. Xia"]
+  year: 2021
+  venue: "CAC"
+  type: "conference"
+
+- title: "A Less Noisy Time Surface for Event-based Visual Odometry"
+  authors: ["R. Hu", "Y. Xia", "Z. Sun"]
+  year: 2021
+  venue: "ICUS"
+  type: "conference"
+
+- title: "Application of Active Disturbance Rejection Control in Tank Gun Control System"
+  authors: ["W. Zhao", "Y. Xia", "H. Song", "Z. Sun", "Y. Xu"]
+  year: 2021
+  venue: "CCC"
+  type: "conference"
+
+- title: "Distributed hierarchical MPC based on evolutionary game for formation control with collision and obstacle avoidance"
+  authors: ["L. Dai", "X. Zhou", "Z. Sun", "Y. Xia"]
+  year: 2021
+  venue: "CCC"
+  type: "conference"
+
+- title: "Robust Tracking Model Predictive Control With Quadratic Robustness Constraint for Mobile Robots With Incremental Input Constraints"
+  authors: ["L. Dai", "Y. Lu", "H. Xie", "Z. Sun", "Y. Xia"]
+  year: 2021
+  venue: "IEEE Transactions on Industrial Electronics"
+  type: "journal"
+
+- title: "Self-Triggered Stochastic MPC for Linear Systems With Disturbances"
+  authors: ["Z. Sun", "V. Rostampour", "M. Cao"]
+  year: 2019
+  venue: "IEEE Control Systems Letters"
+  type: "journal"
+
+- title: "Network Scheduling and Control Co-Design for Multi-Loop MPC"
+  authors: ["K. Liu", "A. Ma", "Y. Xia", "Z. Sun", "K. H. Johansson"]
+  year: 2019
+  venue: "IEEE Transactions on Automatic Control"
+  type: "journal"
+
+- title: "Robust Self-Triggered MPC With Adaptive Prediction Horizon for Perturbed Nonlinear Systems"
+  authors: ["Z. Sun", "L. Dai", "K. Liu", "D. V. Dimarogonas", "Y. Xia"]
+  year: 2019
+  venue: "IEEE Transactions on Automatic Control"
+  type: "journal"
+
+- title: "Self-Triggered MPC for Tracking of Constrained Wheeled Robots with Additive Disturbance"
+  authors: ["Q. Cao", "Y. Xia", "Z. Sun", "H. Jiang", "X. Liu"]
+  year: 2018
+  venue: "DDCLS"
+  type: "conference"
+
+- title: "Robust Nonlinear Model Predictive Control for Robot Manipulators with Disturbances"
+  authors: ["Y. Yu", "L. Dai", "Z. Sun", "Y. Xia"]
+  year: 2018
+  venue: "CCC"
+  type: "conference"
+
+- title: "Self-Triggered Model Predictive Control for Continue Linear Constrained System: Robustness and Stability"
+  authors: ["Y. Luo", "Y. Xia", "Z. Sun"]
+  year: 2018
+  venue: "CCC"
+  type: "conference"
+
+- title: "Consensus-based formation control with dynamic role assignment and obstacle avoidance"
+  authors: ["Z. Sun", "Y. Xia", "X. Na"]
+  year: 2017
+  venue: "IMA Journal of Mathematical Control and Information"
+  type: "journal"
+
+- title: "Disturbance Rejection MPC for Tracking of Wheeled Mobile Robot"
+  authors: ["Z. Sun", "Y. Xia", "L. Dai", "K. Liu", "D. Ma"]
+  year: 2017
+  venue: "IEEE/ASME Transactions on Mechatronics"
+  type: "journal"
+
+- title: "Second-order consensus of multi-agent systems via an artificial stabilizing delay: A Lyapunov-based approach"
+  authors: ["X. Pan", "K. Liu", "Z. Sun", "Y. Xia"]
+  year: 2017
+  venue: "CCC"
+  type: "conference"
+
+- title: "Consensus-based formation control with dynamic role assignment"
+  authors: ["Z. Sun", "Y. Xia"]
+  year: 2014
+  venue: "CCDC"
+  type: "conference"

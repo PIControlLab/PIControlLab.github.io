@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="project-detail-container">
+    <article class="project-article">
+        <header class="project-header">
+            <nav class="project-breadcrumb">
+                <a href="/research/">研究项目</a> / <span>{{ .Title }}</span>
+            </nav>
+            <h1 class="project-title">{{ .Title }}</h1>
+            <div class="project-meta">
+                {{ with .Params.research_area }}
+                <span class="research-area">研究方向: {{ . }}</span>
+                {{ end }}
+                {{ with .Date }}
+                <span class="publish-date">发布时间: {{ .Format "2006年1月2日" }}</span>
+                {{ end }}
+            </div>
+        </header>
+
+        {{ if .Params.image }}
+        <div class="project-hero-image">
+            <img src="{{ .Params.image }}" alt="{{ .Title }}">
+        </div>
+        {{ end }}
+
+        <div class="project-content">
+            {{ .Content }}
+        </div>
+
+        <footer class="project-footer">
+            <a href="/research/" class="back-to-research">返回</a>
+        </footer>
+    </article>
+</div>
+{{ end }}

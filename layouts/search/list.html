@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="search-container">
+    <div class="search-header">
+        <h1>站内搜索</h1>
+        <form id="searchForm" class="search-form">
+            <div class="search-input-container">
+                <input type="text" id="searchInput" name="q" class="search-input" 
+                       placeholder="输入关键词搜索成员、论文、研究项目等内容..." autocomplete="off" 
+                       value="{{ .Params.q | default "" }}">
+                <button type="submit" class="search-button">搜索</button>
+            </div>
+        </form>
+        <div class="search-stats" id="searchStats">
+            <!-- 搜索结果统计将在这里显示 -->
+        </div>
+    </div>
+
+    <div class="search-results" id="searchResults">
+        {{ if .Params.q }}
+            <p>正在搜索 "{{ .Params.q }}"...</p>
+        {{ else }}
+            <p>请输入关键词开始搜索</p>
+        {{ end }}
+    </div>
+
+    <div class="no-results" id="noResults" style="display: none;">
+        <p>没有找到相关结果，请尝试其他关键词</p>
+    </div>
+</div>
+
+<!-- 引入搜索脚本 -->
+<script src="{{ "js/search.js" | relURL }}"></script>
+{{ end }}

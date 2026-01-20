@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="gallery-detail-container">
+    <article class="gallery-detail-article">
+        <!-- 添加图片标题 -->
+        <div class="gallery-detail-header">
+            <h1 class="gallery-detail-title">{{ .Title }}</h1>
+        </div>
+
+        <!-- 主图片 -->
+        {{ if .Params.image }}
+        <div class="gallery-detail-hero-image">
+            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+        </div>
+        {{ end }}
+
+        <!-- 详细描述 -->
+        <div class="gallery-detail-content">
+            {{ .Content }}
+        </div>
+
+        <!-- 返回链接 -->
+        <footer class="gallery-detail-footer">
+            <a href="/gallery/" class="back-to-gallery">
+                </i> 返回
+            </a>
+        </footer>
+    </article>
+</div>
+{{ end }}

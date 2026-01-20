@@ -1,0 +1,90 @@
+{{ define "main" }}
+<div class="container">
+    <div class="team-container"> <!-- 添加团队容器 -->
+        <h1>{{ .Title }}</h1>
+        
+        <!-- 实验室导师部分 -->
+        <section class="team-section">
+            <h2>实验室导师</h2>
+            <div class="team-members"> <!-- 修改为自定义类名 -->
+                {{ range where .Pages "Params.role" "实验室导师" }}
+                <div class="team-member"> <!-- 移除Bootstrap列类 -->
+                    <div class="member-card">
+                        <!-- 头像显示 -->
+                        {{ if .Params.avatar }}
+                        <div class="member-avatar">
+                            <img src="{{ .Params.avatar | relURL }}" alt="{{ .Title }}">
+                        </div>
+                        {{ else }}
+                        <div class="member-avatar">
+                            <div class="avatar-placeholder">
+                                无头像
+                            </div>
+                        </div>
+                        {{ end }}
+
+                        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <p class="member-role">{{ .Params.position }}</p>
+                        <p class="member-research">{{ .Params.research }}</p>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </section>
+
+        <!-- 博士生部分 -->
+        <section class="team-section">
+            <h2>博士生</h2>
+            <div class="team-members">
+                {{ range where .Pages "Params.role" "博士生" }}
+                <div class="team-member">
+                    <div class="member-card">
+                        <!-- 头像显示 -->
+                        {{ if .Params.avatar }}
+                        <div class="member-avatar">
+                            <img src="{{ .Params.avatar | relURL }}" alt="{{ .Title }}">
+                        </div>
+                        {{ else }}
+                        <div class="member-avatar">
+                            <div class="avatar-placeholder">
+                                无头像
+                            </div>
+                        </div>
+                        {{ end }}
+                        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <p class="member-research">{{ .Params.research }}</p>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </section>
+
+        <!-- 硕士生部分 -->
+        <section class="team-section">
+            <h2>硕士生</h2>
+            <div class="team-members">
+                {{ range where .Pages "Params.role" "硕士生" }}
+                <div class="team-member">
+                    <div class="member-card">
+                        <!-- 头像显示 -->
+                        {{ if .Params.avatar }}
+                        <div class="member-avatar">
+                            <img src="{{ .Params.avatar | relURL }}" alt="{{ .Title }}">
+                        </div>
+                        {{ else }}
+                        <div class="member-avatar">
+                            <div class="avatar-placeholder">
+                                无头像
+                            </div>
+                        </div>
+                        {{ end }}
+                        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <p class="member-research">{{ .Params.research }}</p>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </section>
+    </div>
+</div>
+{{ end }}

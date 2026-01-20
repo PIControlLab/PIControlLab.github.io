@@ -1,0 +1,68 @@
+{{ define "main" }}
+<div class="container news-container">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
+
+<!-- 页面标题 -->
+            <header class="news-page-header">
+                <h1 class="news-page-title">{{ .Title }}</h1>
+                {{ if .Content }}
+                <div class="news-page-description">
+                    {{ .Content }}
+                </div>
+                {{ end }}
+            </header>
+            
+            <div class="news-list">
+                {{ range .Pages.ByDate.Reverse }}
+                <article class="news-item">
+                    <div class="row">
+                        <!-- 新闻文字内容 -->
+                        <div class="col-md-8">
+                            <div class="news-content">
+                                <div class="news-header">
+                                    <h2 class="news-title">
+                                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                    </h2>
+                                    <div class="news-meta">
+                                        <span class="update-date">最近更新于{{ .Lastmod.Format "2006年1月2日" }}</span>
+                                        <span class="reading-time">• {{ .ReadingTime }}分钟阅读时长</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="news-summary">
+                                    {{ if .Params.description }}
+                                        <p>{{ .Params.description }}</p>
+                                    {{ else }}
+                                        <p>{{ .Summary | plainify | safeHTML | truncate 150 }}</p>
+                                    {{ end }}
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- 新闻图片 -->
+                        <div class="col-md-4">
+                            <div class="news-image">
+                                {{ if .Params.image }}
+                                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="img-responsive">
+                                {{ else }}
+                                <div class="news-image-placeholder">
+                                    <span>暂无图片</span>
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {{ if not .Lastmod.IsZero }}
+                    <hr class="news-divider">
+                    {{ end }}
+                </article>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

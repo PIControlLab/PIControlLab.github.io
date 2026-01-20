@@ -1,0 +1,52 @@
+categories:
+  - id: MPC
+    name: 模型预测控制
+    description: 先进控制理论在复杂系统中的应用研究
+  - id: RL
+    name: 强化学习
+    description: 智能学习与决策理论在复杂系统中的应用研究
+  - id: Agent
+    name: 智能体
+    description: 自主智能体在协同控制与决策中的行为研究
+
+projects:
+  MPC:
+    - title: "AI视觉检测机器人"
+      slug: "ai-vision-inspection-robot"
+      summary: "AI视觉检测机器人是一款高效的智能检测系统，专注于三维尺寸测量与表面缺陷检测。该机器人能够通过AI技术实现精确的自动识别与分类，特别适用于金属加工、焊接和生产线的质量控制需求。"
+      image: "/img/projects/vision-inspection.jpg"
+      featured: true
+    - title: "AI视觉清洗机器人"
+      slug: "ai-vision-cleaning-robot"
+      summary: "AI视觉清洗机器人是一款专注于高效清洁的智能设备，主要面向光伏电站及工业清洁场景。机器人通过AI视觉系统精准识别清洁目标，采用无水清洁技术与模块化设计。"
+      image: "/img/projects/vision-cleaning.png"
+      featured: true
+    - title: "AI语言机器人"
+      slug: "ai-language-robot"
+      summary: "AI语言机器人是一款专注于高效清洁的智能设备，主要面向光伏电站及工业清洁场景。机器人通过AI视觉系统精准识别清洁目标，采用无水清洁技术与模块化设计。"
+      image: "/img/projects/vision-cleaning.png"
+      featured: true
+
+  RL:
+    - title: "分布式模型预测控制"
+      slug: "distributed-mpc"
+      summary: "针对大规模系统控制问题，我们开发了分布式模型预测控制算法，实现多智能体系统的协同控制，在保证系统性能的同时降低计算复杂度。"
+      image: "/img/projects/distributed-mpc.jpg"
+      featured: true
+    - title: "鲁棒模型预测控制"
+      slug: "robust-mpc"
+      summary: "研究具有不确定性的系统模型预测控制方法，提高控制系统在复杂环境下的鲁棒性和可靠性。"
+      image: "/img/projects/robust-mpc.jpg"
+      featured: false
+
+  Agent:
+    - title: "智能交通管理系统"
+      slug: "intelligent-traffic-management"
+      summary: "基于深度学习和强化学习的智能交通管理系统，能够实时优化交通信号控制，缓解城市交通拥堵，提高道路利用效率。"
+      image: "/img/projects/traffic-management.jpg"
+      featured: true
+    - title: "车路协同技术"
+      slug: "vehicle-infrastructure-cooperation"
+      summary: "研究车路协同系统中的通信、感知和控制技术，实现车辆与基础设施之间的信息交互，提升交通安全和效率。"
+      image: "/img/projects/v2x.jpg"
+      featured: true

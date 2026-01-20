@@ -1,0 +1,43 @@
+{{ define "main" }}
+<div class="gallery-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- 页面标题 -->
+                <div class="gallery-page-header">
+                    <h1 class="gallery-page-title">{{ .Title }}</h1>
+                </div>
+
+                <!-- 设备展示 -->
+                {{ range .Site.Data.gallery }}
+                <div class="gallery-section">
+                    <h2 class="gallery-category-title">{{ .category }}</h2>
+                    <div class="gallery-grid">
+                        {{ range .items }}
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                {{ if .slug }}
+                                    <a href="/gallery/{{ .slug }}/">
+                                        <img src="{{ .image | relURL }}" alt="{{ .title }}" loading="lazy">
+                                    </a>
+                                {{ else }}
+                                    <img src="{{ .image | relURL }}" alt="{{ .title }}" loading="lazy">
+                                {{ end }}
+                            </div>
+                            <div class="gallery-title">
+                                {{ if .slug }}
+                                    <h3><a href="/gallery/{{ .slug }}/">{{ .title }}</a></h3>
+                                {{ else }}
+                                    <h3>{{ .title }}</h3>
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

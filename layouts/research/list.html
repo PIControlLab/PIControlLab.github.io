@@ -1,0 +1,50 @@
+{{ define "main" }}
+<div class="research-container">
+    <div class="research-page-header">
+        <h1 class="research-page-title">{{ .Title }}</h1>
+        <p class="research-page-subtitle">实验室特色研究项目</p>
+    </div>
+
+    <!-- 研究方向切换按钮 -->
+    <div class="research-tabs">
+    	<div class="research-tabs-container">
+        	{{ range .Site.Data.research.categories }}
+        	<button class="research-tab" data-tab="{{ .id }}">{{ .name }}</button>
+        	{{ end }}
+    	</div>
+    </div>
+
+    <!-- 研究项目内容区域 -->
+    <div class="research-content">
+        {{ range .Site.Data.research.categories }}
+        <div class="research-tab-content" id="{{ .id }}">
+            <div class="category-description">
+                <p>{{ .description }}</p>
+            </div>
+            <div class="research-projects-list">
+                {{ $projects := index $.Site.Data.research.projects .id }}
+                {{ range $projects }}
+                <div class="research-project-single">
+                    <div class="project-content">
+                        <h3><a href="/research/{{ .slug }}/">{{ .title }}</a></h3>
+                        <p>{{ .summary }}</p>
+                    </div>
+                    {{ if .image }}
+                    <div class="project-image">
+                        <img src="{{ .image }}" alt="{{ .title }}">
+                    </div>
+                    {{ end }}
+                </div>
+                {{ else }}
+                <div class="no-projects">
+                    <p>该研究方向暂无项目</p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<script src="{{ "js/research.js" | relURL }}"></script>
+{{ end }}

@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="container projects-container">
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- 页面标题区域 -->
+            <div class="projects-page-header">
+                <h1 class="projects-page-title">{{ .Title }}</h1>
+            </div>
+
+            <!-- 项目内容 -->
+            <div class="projects-content">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

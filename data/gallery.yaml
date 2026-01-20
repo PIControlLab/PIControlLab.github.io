@@ -1,0 +1,28 @@
+- category: "实验设备"
+  items:
+    - title: "Nvidia A6000 显卡组"
+      image: "img/equipment/nvidia-a6000.jpg"
+      slug: "nvidia-a6000"
+    - title: "Cobot 协作机器人"
+      image: "img/equipment/cobot.jpg"
+    - title: "SLAM 测试平台"
+      image: "img/equipment/slam-platform.jpg"
+    - title: "双目相机"
+      image: "img/equipment/stereo-camera.jpg"
+
+- category: "研究平台"
+  items:
+    - title: "AI 视觉检测平台"
+      image: "img/platform/ai-vision.jpg"
+    - title: "机器人控制平台"
+      image: "img/platform/robot-control.jpg"
+    - title: "数据分析工作站"
+      image: "img/platform/data-analysis.jpg"
+    - title: "仿真测试环境"
+      image: "img/platform/simulation.jpg"
+
+- category: "活动照片"
+  items:
+    - title: "2025年聚餐"
+      image: "img/platform/ai-vision.jpg"
+    

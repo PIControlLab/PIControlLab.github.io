@@ -1,0 +1,53 @@
+{{ define "main" }}
+<div class="container member-simple-container">
+    
+    <!-- 头像和头衔区域（有阴影边框） -->
+    <div class="member-header-card text-center">
+        <!-- 头像 -->
+        <div class="member-avatar-simple mb-4">
+            {{ if .Params.avatar }}
+                <img src="{{ .Params.avatar | relURL }}" alt="{{ .Title }}">
+            {{ else }}
+                <div class="avatar-placeholder-large">
+                    无头像
+                </div>
+            {{ end }}
+        </div>
+        
+        <!-- 姓名和头衔 -->
+        <h1 class="mb-2">{{ .Title }}</h1>
+        
+        <div class="member-simple-title">
+            {{ if .Params.position }}
+                <!-- 将职位信息拆分成两行 -->
+                {{ $position_parts := split .Params.position " " }}
+                {{ if gt (len $position_parts) 3 }}
+                    <!-- 第一行：前两个职位 -->
+                    <h3 class="member-position mb-2">
+                        {{ index $position_parts 0 }} {{ index $position_parts 1 }}
+                    </h3>
+                    <!-- 第二行：剩余职位 -->
+                    <h4 class="member-subposition">
+                        {{ range $i, $part := $position_parts }}
+                            {{ if gt $i 1 }}{{ $part }} {{ end }}
+                        {{ end }}
+                    </h4>
+                {{ else }}
+                    <!-- 如果职位信息不长，就显示在一行 -->
+                    <h3 class="member-position">{{ .Params.position }}</h3>
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+    
+    <!-- 个人介绍区域（没有阴影边框） -->
+    <div class="member-bio-section">
+        <!-- 添加居中标题 -->
+        <h2 class="bio-title text-center">个人介绍</h2>
+        
+        <div class="member-bio-content">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+{{ end }}

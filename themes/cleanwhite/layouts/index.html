@@ -1,0 +1,106 @@
+{{ define "main" }}
+  
+  <!-- 简洁首页内容 -->
+  <div class="container home-sections-container">
+    
+    <!-- 第一行：新闻动态和招聘启事 -->
+    <div class="home-row-1">
+      
+      <!-- 新闻动态 -->
+      <div class="home-section-clean">
+        <div class="section-header-clean">
+          <h3>新闻动态</h3>
+          <a href="/news/" class="more-link-clean">更多</a>
+        </div>
+        <div class="section-content-clean">
+          {{ $news := where .Site.RegularPages "Type" "news" }}
+          {{ if $news }}
+            <!-- 第一条新闻：侧边图片布局，带简介 -->
+            {{ with index $news 0 }}
+            <div class="news-featured-side">
+              <div class="news-featured-side-content">
+                {{ if .Params.image }}
+                <div class="news-featured-side-image">
+                  <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                </div>
+                {{ end }}
+                <div class="news-featured-side-text">
+                  <a href="{{ .RelPermalink }}" class="news-featured-side-title">{{ .Title }}</a>
+                  {{ if .Params.description }}
+                  <p class="news-featured-side-description">{{ .Params.description }}</p>
+                  {{ end }}
+                  <span class="news-featured-side-date">{{ .Date.Format "2006-01-02" }}</span>
+                </div>
+              </div>
+            </div>
+            {{ end }}
+            
+            <!-- 其余新闻：只显示标题 -->
+            {{ range $index, $element := first 2 (after 1 $news) }}
+            <div class="news-item-clean">
+              <a href="{{ .RelPermalink }}" class="news-title-clean">{{ .Title }}</a>
+              <span class="news-date-clean">{{ .Date.Format "2006-01-02" }}</span>
+            </div>
+            {{ if lt $index 0 }}<div class="news-divider"></div>{{ end }}
+            {{ end }}
+          {{ else }}
+            <div class="no-content-clean">暂无新闻</div>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- 招聘启事 -->
+      <div class="home-section-clean">
+        <div class="section-header-clean">
+          <h3>招聘启事</h3>
+        </div>
+        <div class="section-content-clean">
+          {{ range first 2 (where .Site.RegularPages "Type" "recruitment") }}
+          <div class="recruitment-card">
+            <div class="recruitment-card-content">
+              <div class="recruitment-date-column">
+                <div class="recruitment-month">{{ .Date.Format "2006-01" }}</div>
+                <div class="recruitment-day">{{ .Date.Format "02" }}</div>
+              </div>
+              <div class="recruitment-divider"></div>
+              <a href="{{ .RelPermalink }}" class="recruitment-title-clean">{{ .Title }}</a>
+            </div>
+          </div>
+          {{ else }}
+          <div class="no-content-clean">暂无招聘信息</div>
+          {{ end }}
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- 第二行：风采展示 -->
+    <div class="home-row-2">
+      <div class="showcase-clean">
+        <div class="showcase-header-clean">
+          <h3>风采展示</h3>
+        </div>
+        <div class="showcase-content-clean">
+          <div class="showcase-grid-clean">
+            {{ range first 4 (where .Site.RegularPages "Type" "showcase") }}
+            <div class="showcase-item-clean">
+              <a href="{{ .Params.link }}">
+                {{ if .Params.image }}
+                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="showcase-image-clean">
+                {{ else }}
+                <div class="showcase-image-clean placeholder">{{ .Title }}</div>
+                {{ end }}
+                <div class="showcase-title-clean">{{ .Title }}</div>
+              </a>
+            </div>
+            {{ else }}
+            <div class="no-content-clean">暂无风采展示</div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{{ end }}
+

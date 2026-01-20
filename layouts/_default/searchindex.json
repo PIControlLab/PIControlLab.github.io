@@ -1,0 +1,100 @@
+{{- $searchIndex := slice -}}
+
+{{- /* 收集常规页面，排除search和showcase类型 */ -}}
+{{- range where .Site.Pages "Kind" "page" -}}
+{{- if and (ne .Type "search") (ne .Type "showcase") (ne .RelPermalink "/search/") -}}
+{{- $searchIndex = $searchIndex | append (dict
+  "title" .Title
+  "permalink" .Permalink
+  "summary" (.Summary | plainify)
+  "content" (.Plain | plainify)
+  "date" (.Date.Format "2006-01-02")
+  "type" "page"
+  "section" .Type
+) -}}
+{{- end -}}
+{{- end -}}
+
+{{- /* 收集成员页面 */ -}}
+{{- $members := where .Site.Pages "Type" "member" -}}
+{{- range $members -}}
+{{- $searchIndex = $searchIndex | append (dict
+  "title" .Title
+  "permalink" .Permalink
+  "summary" (.Summary | plainify)
+  "content" (.Plain | plainify)
+  "date" (.Date.Format "2006-01-02")
+  "type" "member"
+  "role" (.Params.role | default "")
+  "position" (.Params.position | default "")
+  "research" (.Params.research | default "")
+  "experience" (.Params.experience | plainify | default "")
+  "projects" (.Params.projects | plainify | default "")
+  "papers" (.Params.papers | plainify | default "")
+) -}}
+{{- end -}}
+
+{{- /* 收集项目页面 */ -}}
+{{- $projects := where .Site.Pages "Type" "projects" -}}
+{{- range $projects -}}
+{{- $searchIndex = $searchIndex | append (dict
+  "title" .Title
+  "permalink" .Permalink
+  "summary" (.Summary | plainify)
+  "content" (.Plain | plainify)
+  "date" (.Date.Format "2006-01-02")
+  "type" "project"
+  "research_area" (.Params.research_area | default "")
+) -}}
+{{- end -}}
+
+{{- /* 收集论文数据 */ -}}
+{{- with .Site.Data.papers -}}
+{{- range . -}}
+{{- $searchIndex = $searchIndex | append (dict
+  "title" .title
+  "permalink" "/papers/"
+  "summary" (printf "作者: %s | 发表于: %s" (delimit .authors ", ") (.venue | default ""))
+  "content" (printf "%s %s %s" .title (delimit .authors " ") (.venue | default ""))
+  "date" (string .year)
+  "type" "paper"
+  "authors" .authors
+  "venue" .venue
+) -}}
+{{- end -}}
+{{- end -}}
+
+{{- /* 收集研究项目数据 */ -}}
+{{- with .Site.Data.research -}}
+{{- range $categoryId, $projects := .projects -}}
+{{- range $project := $projects -}}
+{{- $searchIndex = $searchIndex | append (dict
+  "title" .title
+  "permalink" (printf "/research/#%s" (.slug | default (replaceRE `\s+` "-" (lower .title))))
+  "summary" .summary
+  "content" (printf "%s %s" .title .summary)
+  "date" ""
+  "type" "research"
+  "category" $categoryId
+) -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{- /* 收集图库数据 - 修复图片标题搜索 */ -}}
+{{- with .Site.Data.gallery -}}
+{{- range $category := . -}}
+{{- range $item := .items -}}
+{{- $searchIndex = $searchIndex | append (dict
+  "title" .title
+  "permalink" "/gallery/"
+  "summary" $category.category
+  "content" (printf "%s %s %s" .title $category.category (.image | default ""))
+  "date" ""
+  "type" "gallery"
+  "category" $category.category
+  "image" (.image | default "")
+) -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}

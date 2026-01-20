@@ -1,0 +1,124 @@
+{{/* Generates a valid Algolia search index */}}
+{{- $.Scratch.Add "index" slice -}}
+{{- $section := $.Site.GetPage "section" .Section -}}
+
+{{- range .Site.AllPages -}}
+  {{- $shouldIndex := false -}}
+  
+  {{- /* 检查是否是常规内容页面 */ -}}
+  {{- if and (and (.IsDescendant $section) (and (not .Draft) (not .Params.private))) $section.IsHome -}}
+    {{- $shouldIndex = true -}}
+  {{- end -}}
+  
+  {{- /* 检查是否是成员页面 */ -}}
+  {{- if and (eq .Type "member") (and (not .Draft) (not .Params.private)) -}}
+    {{- $shouldIndex = true -}}
+  {{- end -}}
+
+  {{- /* 检查是否是论文页面 */ -}}
+  {{- if and (eq .Type "paper") (and (not .Draft) (not .Params.private)) -}}
+    {{- $shouldIndex = true -}}
+  {{- end -}}
+  
+  {{- if and $shouldIndex (and .File (not .Params.search_exclude)) -}}
+    {{- $content := "" -}}
+    {{- $memberFields := dict -}}
+    {{- $paperFields := dict -}}
+    
+    {{- /* 对于成员页面，构建包含所有信息的内容 */ -}}
+    {{- if eq .Type "member" -}}
+      {{- $memberContent := slice -}}
+      {{- $memberContent = $memberContent | append .Title -}}
+      {{- $memberContent = $memberContent | append .Params.role -}}
+      {{- $memberContent = $memberContent | append .Params.position -}}
+      {{- $memberContent = $memberContent | append .Params.research -}}
+      {{- $memberContent = $memberContent | append .Params.email -}}
+      {{- $memberContent = $memberContent | append .Params.office -}}
+      {{- $memberContent = $memberContent | append .Params.phone -}}
+      {{- $memberContent = $memberContent | append .Params.experience -}}
+      {{- $memberContent = $memberContent | append .Params.projects -}}
+      {{- $memberContent = $memberContent | append .Params.papers -}}
+      {{- $content = delimit $memberContent " " -}}
+      {{- $memberFields = dict
+        "role" .Params.role
+        "position" .Params.position
+        "research" .Params.research
+        "email" .Params.email
+        "office" .Params.office
+        "phone" .Params.phone
+        "experience" .Params.experience
+        "projects" .Params.projects
+        "papers" .Params.papers
+      -}}
+    
+    {{- /* 对于论文页面，构建包含所有信息的内容 */ -}}
+    {{- else if eq .Type "paper" -}}
+      {{- $paperContent := slice -}}
+      {{- $paperContent = $paperContent | append .Title -}}
+      {{- $paperContent = $paperContent | append .Params.authors -}}
+      {{- $paperContent = $paperContent | append .Params.venue -}}
+      {{- $paperContent = $paperContent | append .Params.abstract -}}
+      {{- $paperContent = $paperContent | append .Params.keywords -}}
+      {{- $paperContent = $paperContent | append .Params.doi -}}
+      {{- $paperContent = $paperContent | append .Params.year -}}
+      {{- $content = delimit $paperContent " " -}}
+      {{- $paperFields = dict
+        "authors" .Params.authors
+        "venue" .Params.venue
+        "abstract" .Params.abstract
+        "keywords" .Params.keywords
+        "doi" .Params.doi
+        "year" .Params.year
+        "journal" .Params.journal
+        "conference" .Params.conference
+        "volume" .Params.volume
+        "issue" .Params.issue
+        "pages" .Params.pages
+      -}}
+    
+    {{- /* 其他类型页面 */ -}}
+    {{- else -}}
+      {{- $content = truncate 1000 .Plain -}}
+    {{- end -}}
+    
+    {{- /* 创建基础字典 */ -}}
+    {{- $baseDict := dict
+      "objectID" .File.UniqueID
+      "date" .Date.UTC.Unix
+      "dir" .File.Dir
+      "expirydate" .ExpiryDate.UTC.Unix
+      "fuzzywordcount" .FuzzyWordCount
+      "keywords" .Keywords
+      "kind" .Kind
+      "lang" .Lang
+      "lastmod" .Lastmod.UTC.Unix
+      "permalink" .Permalink
+      "publishdate" .PublishDate
+      "readingtime" .ReadingTime
+      "relpermalink" .RelPermalink
+      "html" .Params.Description
+      "title" .Title
+      "type" .Type
+      "url" .RelPermalink
+      "weight" .Weight
+      "wordcount" .WordCount
+      "section" .Section
+      "tags" .Params.Tags
+      "categories" .Params.Categories
+      "author" .Params.authors
+      "content" $content
+    -}}
+    
+    {{- /* 如果是成员页面，合并成员字段 */ -}}
+    {{- if eq .Type "member" -}}
+      {{- $baseDict = merge $baseDict $memberFields -}}
+    
+    {{- /* 如果是论文页面，合并论文字段 */ -}}
+    {{- else if eq .Type "paper" -}}
+      {{- $baseDict = merge $baseDict $paperFields -}}
+    {{- end -}}
+    
+    {{- $.Scratch.Add "index" $baseDict -}}
+  {{- end -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

@@ -1,0 +1,4 @@
+baseURL = 'https://samyasaaa.github.io/'
+languageCode = 'zh-us'
+title = 'Samyas blog'
+theme = 'ananke'

@@ -1,0 +1,169 @@
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch-theme-algolia.min.css">
+
+<div id="search-searchbar"></div>
+<div class="post-list" id="search-hits"></div>
+
+<script>
+const search = instantsearch({
+  appId: '{{ .Site.Params.algolia_appId }}',
+  indexName: '{{ .Site.Params.algolia_indexName }}',
+  apiKey: '{{ .Site.Params.algolia_apiKey }}',
+  searchParameters: {
+    hitsPerPage: 10,
+    attributesToRetrieve: ['*'], // 获取所有字段
+    attributesToHighlight: ['title', 'content', 'role', 'position', 'research', 'experience', 'projects', 'papers']
+  }
+});
+
+const hitTemplate = function(hit) {
+  let date = '';
+  if (hit.date) {
+    date = moment.unix(hit.date).format('MMM D, YYYY');
+  }
+  
+  // 使用正确的 URL
+  let url = hit.url || hit.permalink || hit.relpermalink;
+  if (hit.anchor) {
+    url += `#${hit.anchor}`;
+  }
+
+  const title = hit._highlightResult && hit._highlightResult.title ? 
+    hit._highlightResult.title.value : hit.title;
+
+  let breadcrumbs = '';
+  if (hit._highlightResult && hit._highlightResult.headings) {
+    breadcrumbs = hit._highlightResult.headings.map(match => {
+      return `<span class="post-breadcrumb">${match.value}</span>`
+    }).join(' > ');
+  }
+
+  let content = "";
+  if (hit._highlightResult && hit._highlightResult.content) {
+    content = hit._highlightResult.content.value;
+  } else {
+    content = hit.content || hit.summary || '';
+  }
+
+  // 特殊处理成员页面
+  if (hit.type === 'member') {
+    return `
+      <div class="post-item member-item">
+        <h2><a class="post-link" href="${url}">${title}</a></h2>
+        <div class="member-meta">
+          ${hit.role ? `<span class="member-role">${hit.role}</span>` : ''}
+          ${hit.position ? `<span class="member-position">${hit.position}</span>` : ''}
+          ${hit.research ? `<span class="member-research">研究方向: ${hit.research}</span>` : ''}
+          ${hit.email ? `<span class="member-email">${hit.email}</span>` : ''}
+        </div>
+        ${hit.experience ? `<div class="member-experience"><strong>经历:</strong> ${hit.experience.substring(0, 100)}...</div>` : ''}
+        ${hit.projects ? `<div class="member-projects"><strong>项目:</strong> ${hit.projects.substring(0, 100)}...</div>` : ''}
+        <div class="post-snippet">${content.substring(0, 200)}...</div>
+      </div>
+    `;
+  }
+
+  // 默认的文章显示
+  return `
+    <div class="post-item">
+      <span class="post-meta">${date}</span>
+      <h2><a class="post-link" href="${url}">${title}</a></h2>
+      <a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>
+      <div class="post-snippet">${content}</div>
+    </div>
+  `;
+}
+
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#search-searchbar',
+    placeholder: '搜索成员、研究方向、职位、项目...',
+    poweredBy: true
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '#search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: `没有找到相关结果，请尝试其他关键词`
+    }
+  })
+);
+
+search.start();
+</script>
+
+<style>
+.ais-search-box {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+.post-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+}
+.member-item {
+  background-color: #f9f9f9;
+  border-left: 4px solid #2a7ae2;
+}
+.post-link .ais-Highlight {
+  color: #111;
+  font-style: normal;
+  text-decoration: underline;
+}
+.post-breadcrumbs {
+  color: #424242;
+  display: block;
+}
+.post-breadcrumb {
+  font-size: 18px;
+  color: #424242;
+}
+.post-breadcrumb .ais-Highlight {
+  font-weight: bold;
+  font-style: normal;
+}
+.post-snippet .ais-Highlight {
+  color: #2a7ae2;
+  font-style: normal;
+  font-weight: bold;
+}
+.post-snippet img {
+  display: none;
+}
+
+/* 成员信息样式 */
+.member-meta {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.member-role, .member-position, .member-research, .member-email {
+  background: #e3f2fd;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #1565c0;
+}
+.member-research {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+.member-email {
+  background: #fce4ec;
+  color: #c2185b;
+}
+.member-experience, .member-projects {
+  margin: 8px 0;
+  font-size: 0.95em;
+  color: #666;
+}
+</style>

@@ -1,0 +1,53 @@
+{{ define "main" }}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <!-- 论文页面标题 -->
+            <div class="papers-page-header">
+                <h1 class="papers-page-title">{{ .Title }}</h1>
+            </div>
+
+            <!-- 搜索和筛选区域 -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索论文标题或作者...">
+                <select id="typeFilter">
+                    <option value="">所有类型</option>
+                    <option value="journal">期刊论文</option>
+                    <option value="conference">会议论文</option>
+                </select>
+                <select id="yearFilter">
+                    <option value="">所有年份</option>
+                    <!-- 年份选项将通过JavaScript动态生成 -->
+                </select>
+            </div>
+
+            <!-- 论文列表 -->
+            <div id="papersList">
+                {{ range $index, $paper := .Site.Data.papers }}
+                <div class="paper-item" 
+                     data-title="{{ lower $paper.title }}" 
+                     data-authors="{{ lower (delimit $paper.authors ", ") }}"
+                     data-type="{{ $paper.type }}"
+                     data-year="{{ $paper.year }}">
+                    <div class="paper-title">{{ $paper.title }}</div>
+                    <div class="paper-authors">{{ delimit $paper.authors ", " }}</div>
+                    <div class="paper-meta">
+                        {{ if $paper.venue }}
+       				 {{ $paper.venue }} • {{ $paper.year }}
+    			{{ else }}
+        			 {{ if eq $paper.type "journal" }}期刊论文{{ else }}会议论文{{ end }} • {{ $paper.year }}
+    			{{ end }}
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+
+            <!-- 无结果提示 -->
+            <div id="noResults" class="no-results" style="display: none;">
+                未找到匹配的论文
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ "js/papers.js" | relURL }}"></script>
+{{ end }}

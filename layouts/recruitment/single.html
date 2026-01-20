@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="container recruitment-single-container">
+  <article class="recruitment-article">
+    <!-- 招聘标题区域 -->
+    <header class="recruitment-header">
+      <h1 class="recruitment-title">{{ .Title }}</h1>
+      <div class="recruitment-meta">
+        <span class="update-date">发布日期：{{ .Date.Format "2006-01-02" }}</span>
+      </div>
+    </header>
+
+    <!-- 招聘内容 -->
+    <div class="recruitment-content">
+      {{ .Content }}
+    </div>
+
+    <!-- 申请信息 -->
+    {{ if .Params.application_info }}
+    <section class="application-section">
+      <h2><i class="fas fa-paper-plane"></i> 申请方式</h2>
+      <div class="application-content">
+        {{ .Params.application_info | markdownify }}
+      </div>
+    </section>
+    {{ end }}
+
+    <!-- 联系方式 -->
+    {{ if .Params.contact_info }}
+    <section class="contact-section">
+      <h2><i class="fas fa-envelope"></i> 联系方式</h2>
+      <div class="contact-content">
+        {{ .Params.contact_info | markdownify }}
+      </div>
+    </section>
+    {{ end }}
+
+    <!-- 返回首页链接 -->
+    <footer class="recruitment-footer">
+      <a href="/" class="back-to-home">
+        <i class="fas fa-home"></i> 返回首页
+      </a>
+    </footer>
+  </article>
+</div>
+{{ end }}
