@@ -5,6 +5,9 @@ on:
     branches:
       - source
 
+permissions:
+  contents: write
+  
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -29,3 +32,4 @@ jobs:
           publish_dir: ./public
           publish_branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          force_orphan: true
