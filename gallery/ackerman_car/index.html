@@ -10,14 +10,14 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://PIControlLab.github.io///img/1681122792748811.jpg">
-    <meta property="twitter:image" content="https://PIControlLab.github.io///img/1681122792748811.jpg" />
+    <meta property="og:image" content="img/gallery/equipment/ackerman_car.png">
+    <meta property="twitter:image" content="img/gallery/equipment/ackerman_car.png" />
     
 
     
-    <meta name="title" content="黄宇轩" />
-    <meta property="og:title" content="黄宇轩" />
-    <meta property="twitter:title" content="黄宇轩" />
+    <meta name="title" content="阿克曼底盘小车" />
+    <meta property="og:title" content="阿克曼底盘小车" />
+    <meta property="twitter:title" content="阿克曼底盘小车" />
     
 
     
@@ -26,7 +26,7 @@
     <meta property="twitter:description" content="这里是北京理工大学自动化学院通用智能体控制与决策实验室，欢迎前来交流。" />
     
 
-    <meta property="og:url" content="https://PIControlLab.github.io/member/%E9%BB%84%E5%AE%87%E8%BD%A9/" />
+    <meta property="og:url" content="https://PIControlLab.github.io/gallery/ackerman_car/" />
 
     
     <meta property="twitter:card" content="summary" />
@@ -36,9 +36,9 @@
     <meta name="keyword"  content="BIT, 北京理工大学, 北理工自动化学院 , PI-Control lab, 预测智能控制实验室, 实验室,Predictive Intelligence Control Lab">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>黄宇轩 | BIT预测智能控制实验室</title>
+    <title>阿克曼底盘小车 | BIT预测智能控制实验室</title>
 
-    <link rel="canonical" href="/member/%E9%BB%84%E5%AE%87%E8%BD%A9/">
+    <link rel="canonical" href="/gallery/ackerman_car/">
 
     
 
@@ -80,8 +80,8 @@
     
 
     
-    <link rel="stylesheet" href="/css/member.css">
     
+    <link rel="stylesheet" href="/css/gallery.css">
     
 
 </head>
@@ -179,62 +179,46 @@
 
 
 
-<div class="container member-detail-container">
-    <div class="row">
+<div class="gallery-detail-container">
+    <article class="gallery-detail-article">
         
-        <div class="col-md-4 col-sm-5">
-            <div class="member-sidebar">
-                
-                <div class="member-avatar text-center">
-                    <img src="/img/hyx.jpg" alt="黄宇轩" class="img-responsive">
-                </div>
-                
-                
-                <div class="member-basic-info">
-                    <h1 class="member-name">黄宇轩</h1>
-                    <p class="member-position"></p>
-                    
-                    
-                    <div class="member-contact">
-                        <h3>联系方式</h3>
-                        <ul class="contact-list">
-                            
-                            <li><i class="fa fa-envelope"></i> 3120240867@bit.edu.cn</li>
-                            
-                            
-                            
-                            <li><i class="fa fa-phone"></i> &#43;86-18738723666</li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="gallery-detail-header">
+            <h1 class="gallery-detail-title">阿克曼底盘小车</h1>
+        </div>
+
+        
+        
+        <div class="gallery-detail-hero-image">
+            <img src="/img/gallery/equipment/ackerman_car.png" alt="阿克曼底盘小车">
         </div>
         
+
         
-        <div class="col-md-8 col-sm-7">
-            <div class="member-content">
-                <section class="research-section">
-                    <h2></i> 研究方向</h2>
-                    <div class="research-content">
-                        
-                            <p>模型预测控制与强化学习的结合</p>
-                        
-                    </div>
-                </section>
-                
-                
-                
-                
-                
-                
-
-                
-
-
-            </div>
+        <div class="gallery-detail-content">
+            <p>本平台是一款为控制算法工程化验证而设计的阿克曼底盘移动机器人实验平台，采用模块化硬件与分层控制架构，为算法研发与落地提供标准化硬件载体。</p>
+<h2 id="主要特点">主要特点：</h2>
+<ul>
+<li><strong>模块化与可扩展设计</strong>：硬件与软件层均采用模块化架构，便于快速迭代、功能替换与系统升级。</li>
+<li><strong>分层协同控制架构</strong>：采用决策层+执行层的分层设计，实现智能决策与稳定执行的有机结合。</li>
+<li><strong>实时可靠通信链路</strong>：通过MAVLink协议与MAVROS接口，确保决策层与执行层间指令与状态数据的低延迟、高可靠交互。</li>
+<li><strong>灵活算法验证平台</strong>：全面支持各类运动规划、跟踪控制及融合算法的实测验证，支持从理论仿真到实物落地的转化过程。</li>
+</ul>
+<h2 id="平台详细介绍">平台详细介绍：</h2>
+<p>为解决移动机器人控制算法工程化落地中的硬件适配难题，我们自主设计搭建了一套阿克曼底盘移动机器人实验平台，兼具可靠性能与模块化设计，为先进控制算法的验证与迭代提供硬件支撑与标准化实验载体。
+机载工控机Jetson Orin Nano部署ROS2操作系统，承担路径规划、数据融合及控制指令生成等核心决策任务。飞控板Pixhawk 6C烧录Ardupilot固件采用Rover模式，负责底层电机PID闭环控制、姿态解算及失控保护机制执行，确保车辆的基础运行稳定性。平台底层硬件结构为阿克曼转向机构底盘，选型伺服舵机与直流有刷驱动电机，实现车辆转向与速度的高精度响应。轮电机配置霍尔编码器，可构建速度闭环控制链路。决策层与执行层采用MAVLink通信协议，通过MAVROS接口建立双向数据链路，实现控制指令、状态反馈等信息的实时交互，保障分层架构协同高效运行。</p>
+<figure>
+  <img src="/img/gallery/equipment/ackerman_car_2.png" alt="控制框架">
+  <figcaption>图1：阿克曼底盘控制架构示意图</figcaption>
+</figure>
         </div>
-    </div>
+
+        
+        <footer class="gallery-detail-footer">
+            <a href="/gallery/" class="back-to-gallery">
+                </i> 返回
+            </a>
+        </footer>
+    </article>
 </div>
 
 

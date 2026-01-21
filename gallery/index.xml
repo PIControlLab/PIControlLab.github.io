@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>照片展示 on PI-Control lab</title>
+    <title>基础展示 on PI-Control lab</title>
     <link>https://PIControlLab.github.io/gallery/</link>
-    <description>Recent content in 照片展示 on PI-Control lab</description>
+    <description>Recent content in 基础展示 on PI-Control lab</description>
     <generator>Hugo</generator>
     <language>zh-us</language>
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
@@ -14,6 +14,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://PIControlLab.github.io/gallery/nvidia-a6000/</guid>
       <description>&lt;p&gt;NVIDIA A6000 是基于安培架构的专业级GPU，拥有10752个CUDA核心，48GB GDDR6显存，支持PCIe 4.0接口。该显卡组主要用于深度学习训练、科学计算和高性能计算任务。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>阿克曼底盘小车</title>
+      <link>https://PIControlLab.github.io/gallery/ackerman_car/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://PIControlLab.github.io/gallery/ackerman_car/</guid>
+      <description>&lt;p&gt;本平台是一款为控制算法工程化验证而设计的阿克曼底盘移动机器人实验平台，采用模块化硬件与分层控制架构，为算法研发与落地提供标准化硬件载体。&lt;/p&gt;&#xA;&lt;h2 id=&#34;主要特点&#34;&gt;主要特点：&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;模块化与可扩展设计&lt;/strong&gt;：硬件与软件层均采用模块化架构，便于快速迭代、功能替换与系统升级。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;分层协同控制架构&lt;/strong&gt;：采用决策层+执行层的分层设计，实现智能决策与稳定执行的有机结合。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;实时可靠通信链路&lt;/strong&gt;：通过MAVLink协议与MAVROS接口，确保决策层与执行层间指令与状态数据的低延迟、高可靠交互。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;灵活算法验证平台&lt;/strong&gt;：全面支持各类运动规划、跟踪控制及融合算法的实测验证，支持从理论仿真到实物落地的转化过程。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;平台详细介绍&#34;&gt;平台详细介绍：&lt;/h2&gt;&#xA;&lt;p&gt;为解决移动机器人控制算法工程化落地中的硬件适配难题，我们自主设计搭建了一套阿克曼底盘移动机器人实验平台，兼具可靠性能与模块化设计，为先进控制算法的验证与迭代提供硬件支撑与标准化实验载体。&#xA;机载工控机Jetson Orin Nano部署ROS2操作系统，承担路径规划、数据融合及控制指令生成等核心决策任务。飞控板Pixhawk 6C烧录Ardupilot固件采用Rover模式，负责底层电机PID闭环控制、姿态解算及失控保护机制执行，确保车辆的基础运行稳定性。平台底层硬件结构为阿克曼转向机构底盘，选型伺服舵机与直流有刷驱动电机，实现车辆转向与速度的高精度响应。轮电机配置霍尔编码器，可构建速度闭环控制链路。决策层与执行层采用MAVLink通信协议，通过MAVROS接口建立双向数据链路，实现控制指令、状态反馈等信息的实时交互，保障分层架构协同高效运行。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
