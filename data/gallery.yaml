@@ -1,15 +1,3 @@
-- category: "实验设备"
-  items:
-    - title: "Nvidia A6000 显卡组"
-      image: "img/equipment/nvidia-a6000.jpg"
-      slug: "nvidia-a6000"
-    - title: "Cobot 协作机器人"
-      image: "img/equipment/cobot.jpg"
-    - title: "SLAM 测试平台"
-      image: "img/equipment/slam-platform.jpg"
-    - title: "双目相机"
-      image: "img/equipment/stereo-camera.jpg"
-
 - category: "研究平台"
   items:
     - title: "AI 视觉检测平台"

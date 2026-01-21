@@ -4,8 +4,6 @@
 <body class="{{ if .IsHome }}home{{ else }}not-home{{ end }}">
 {{ partial "nav.html" . }}
 
-<link rel="stylesheet" href="{{ "/css/index.css" | relURL }}">
-
 <!-- Page Header -->
 {{ block "header" .}}
 {{ if .IsHome }}

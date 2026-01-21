@@ -9,6 +9,32 @@
                 </div>
 
                 <!-- 设备展示 -->
+                <section class="equipment-section">
+                    <h2 class="gallery-category-title">实验设备</h2>
+                    <div class="gallery-grid">
+                        {{ range where .Pages "Params.category" "实验设备"}}
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                {{ if .Params.slug }}
+                                    <a href="/gallery/{{ .Params.slug }}/">
+                                        <img src="{{ .Params.image | relURL }}" alt="{{ .Params.title }}" loading="lazy">
+                                    </a>
+                                {{ else }}
+                                    <img src="{{ .Params.image | relURL }}" alt="{{ .Params.title }}" loading="lazy">
+                                {{ end }}
+                            </div>
+                            <div class="gallery-title">
+                                {{ if .Params.slug }}
+                                    <h3><a href="/gallery/{{ .Params.slug }}/">{{ .Params.title }}</a></h3>
+                                {{ else }}
+                                    <h3>{{ .Params.title }}</h3>
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </section>
+
                 {{ range .Site.Data.gallery }}
                 <div class="gallery-section">
                     <h2 class="gallery-category-title">{{ .category }}</h2>

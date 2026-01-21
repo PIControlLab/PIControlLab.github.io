@@ -24,6 +24,8 @@
   "summary" (.Summary | plainify)
   "content" (.Plain | plainify)
   "date" (.Date.Format "2006-01-02")
+  "graduate" (.Date.Format "2006-01-02")
+  "period" (.Params.period | default "")
   "type" "member"
   "role" (.Params.role | default "")
   "position" (.Params.position | default "")
@@ -82,19 +84,19 @@
 {{- end -}}
 
 {{- /* 收集图库数据 - 修复图片标题搜索 */ -}}
-{{- with .Site.Data.gallery -}}
-{{- range $category := . -}}
-{{- range $item := .items -}}
+{{- $gallery :=where .Site.Pages "Type" "gallery" -}}
+{{- range $gallery -}}
+
 {{- $searchIndex = $searchIndex | append (dict
   "title" .title
-  "permalink" "/gallery/"
-  "summary" $category.category
-  "content" (printf "%s %s %s" .title $category.category (.image | default ""))
+  "permalink" .Permalink
+  "summary" .category
+  "content" (printf "%s %s %s" .title .category (.image | default ""))
   "date" ""
   "type" "gallery"
-  "category" $category.category
+  "category" .category
+  "slug" (.slug | default "")
   "image" (.image | default "")
 ) -}}
-{{- end -}}
-{{- end -}}
+
 {{- end -}}

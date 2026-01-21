@@ -20,7 +20,7 @@ hasCJKLanguage = true
 home = ["HTML", "RSS", "JSON"]
 
 [params]
-  custom_css = ["css/custom.css"]
+  custom_css = ["css/base.css"]
   header_image = "/img/1681122792748811.jpg"
   banner_title = "预测智能控制实验室"
   SEOTitle = "BIT预测智能控制实验室"

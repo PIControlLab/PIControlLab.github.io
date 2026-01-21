@@ -36,7 +36,7 @@
         <section class="team-section">
             <h2>博士生</h2>
             <div class="team-members">
-                {{ range where .Pages "Params.role" "博士生" }}
+                {{ range sort (where .Pages "Params.role" "博士生") "Date" "ast"}}
                 <div class="team-member">
                     <div class="member-card">
                         <!-- 头像显示 -->
@@ -52,6 +52,7 @@
                         </div>
                         {{ end }}
                         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <p class="member-period">({{ .Params.period }})</p>
                         <p class="member-research">{{ .Params.research }}</p>
                     </div>
                 </div>
@@ -63,7 +64,7 @@
         <section class="team-section">
             <h2>硕士生</h2>
             <div class="team-members">
-                {{ range where .Pages "Params.role" "硕士生" }}
+                {{ range sort (where .Pages "Params.role" "硕士生") "Date" "ast"}}
                 <div class="team-member">
                     <div class="member-card">
                         <!-- 头像显示 -->
@@ -79,6 +80,7 @@
                         </div>
                         {{ end }}
                         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <p class="member-period">({{ .Params.period }})</p>
                         <p class="member-research">{{ .Params.research }}</p>
                     </div>
                 </div>
@@ -90,7 +92,7 @@
         <section class="team-section">
             <h2>已毕业</h2>
             <div class="team-members">
-                {{ range where .Pages "Params.role" "已毕业" }}
+                {{ range sort (where .Pages "Params.role" "已毕业") "Date" "ast"}}
                 <div class="team-member">
                     <div class="member-card">
                         <!-- 头像显示 -->
