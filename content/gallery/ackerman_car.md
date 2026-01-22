@@ -3,7 +3,7 @@ title: "阿克曼底盘小车"
 image: "img/gallery/equipment/ackerman_car.png"
 category: "实验设备"
 slug: "ackerman_car"
-layout: "single-gallery"
+date: 2024-05-01  
 ---
 
 本平台是一款为控制算法工程化验证而设计的阿克曼底盘移动机器人实验平台，采用模块化硬件与分层控制架构，为算法研发与落地提供标准化硬件载体。
