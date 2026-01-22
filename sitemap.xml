@@ -23,6 +23,9 @@
     <loc>https://PIControlLab.github.io/projects/</loc>
     <lastmod>2025-10-14T17:04:27+08:00</lastmod>
   </url><url>
+    <loc>https://PIControlLab.github.io/gallery/nokov_motion_capture/</loc>
+    <lastmod>2025-09-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://PIControlLab.github.io/member/</loc>
     <lastmod>2025-09-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -34,6 +37,12 @@
   </url><url>
     <loc>https://PIControlLab.github.io/member/%E7%8E%8B%E8%AF%97%E7%BB%AE/</loc>
     <lastmod>2025-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://PIControlLab.github.io/gallery/nvidia_pro_6000/</loc>
+    <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://PIControlLab.github.io/gallery/crazyflie/</loc>
+    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://PIControlLab.github.io/member/%E5%AD%99%E4%B8%AD%E5%A5%87/</loc>
     <lastmod>2025-01-02T00:00:00+00:00</lastmod>
@@ -55,6 +64,9 @@
   </url><url>
     <loc>https://PIControlLab.github.io/news/driving-competition/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://PIControlLab.github.io/gallery/ackerman_car/</loc>
+    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://PIControlLab.github.io/showcase/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
@@ -97,14 +109,8 @@
   </url><url>
     <loc>https://PIControlLab.github.io/categories/</loc>
   </url><url>
-    <loc>https://PIControlLab.github.io/gallery/nvidia-a6000/</loc>
-  </url><url>
     <loc>https://PIControlLab.github.io/tags/</loc>
   </url><url>
     <loc>https://PIControlLab.github.io/search/</loc>
-  </url><url>
-    <loc>https://PIControlLab.github.io/gallery/nvidia_pro_6000/</loc>
-  </url><url>
-    <loc>https://PIControlLab.github.io/gallery/ackerman_car/</loc>
   </url>
 </urlset>
