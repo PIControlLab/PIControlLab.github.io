@@ -1,6 +1,6 @@
 ---
 title: "英伟达显卡 RTX PRO 6000"
-image: "/img/gallery/equipment/nvidia_pro_6000.jpg"
+image: "/img/gallery/equipment/nvidia_pro_6000.png"
 category: "实验设备"
 slug: "nvidia_pro_6000"
 date: 2025-08-01  

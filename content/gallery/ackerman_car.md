@@ -1,6 +1,6 @@
 ---
 title: "阿克曼底盘小车"
-image: "img/gallery/equipment/ackerman_car.png"
+image: "img/gallery/equipment/ackerman_car.jpg"
 category: "实验设备"
 slug: "ackerman_car"
 date: 2024-05-01  
