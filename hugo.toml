@@ -22,6 +22,7 @@ home = ["HTML", "RSS", "JSON"]
 [params]
   custom_css = ["css/base.css"]
   header_image = "/img/1681122792748811.jpg"
+  logo = "/logo.png"
   banner_title = "预测智能控制实验室"
   SEOTitle = "BIT预测智能控制实验室"
   description = "这里是北京理工大学自动化学院通用智能体控制与决策实验室，欢迎前来交流。"
