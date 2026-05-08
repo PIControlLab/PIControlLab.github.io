@@ -13,7 +13,7 @@
       <link>https://PIControlLab.github.io/gallery/nokov_motion_capture/</link>
       <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://PIControlLab.github.io/gallery/nokov_motion_capture/</guid>
-      <description>&lt;p&gt;本平台是一套为机器人与人体动作研究、控制算法开发与实验验证设计的高精度光学动作捕捉系统实验平台，包含18颗高精度动作捕捉镜头和一套动作捕捉与分析软件。&lt;/p&gt;</description>
+      <description>&lt;p&gt;本平台是一套为机器人与人体动作研究、控制算法开发与实验验证设计的高精度光学动作捕捉系统实验平台，包含18颗高精度动作捕捉镜头和一套动作捕捉与分析软件。系统采用 Nokov 的 &lt;code&gt;Mars4H&lt;/code&gt; 型动作捕捉相机，可用于刚体位姿获取、轨迹记录、协同控制实验与高精度运动分析。&lt;/p&gt;</description>
     </item>
     <item>
       <title>英伟达显卡 RTX PRO 6000</title>

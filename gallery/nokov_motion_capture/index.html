@@ -104,7 +104,7 @@
             </button>
             
             <a class="navbar-brand" href="/">
-                <img src="/logo.png" alt="PI-Control lab" style="height: 100px; margin-top: -10px;">
+                <img class="site-logo" src="/logo.png" alt="PI-Control lab">
             </a>
             
         </div>
@@ -148,7 +148,6 @@
     
     
     
-    var $body   = document.body;
     var $toggle = document.querySelector('.navbar-toggle');
     var $navbar = document.querySelector('#huxblog_navbar');
     var $collapse = document.querySelector('.navbar-collapse');
@@ -197,7 +196,8 @@
 
         
         <div class="gallery-detail-content">
-            <p>本平台是一套为机器人与人体动作研究、控制算法开发与实验验证设计的高精度光学动作捕捉系统实验平台，包含18颗高精度动作捕捉镜头和一套动作捕捉与分析软件。</p>
+            <p>本平台是一套为机器人与人体动作研究、控制算法开发与实验验证设计的高精度光学动作捕捉系统实验平台，包含18颗高精度动作捕捉镜头和一套动作捕捉与分析软件。系统采用 Nokov 的 <code>Mars4H</code> 型动作捕捉相机，可用于刚体位姿获取、轨迹记录、协同控制实验与高精度运动分析。</p>
+<p>官网链接：<a href="https://www.nokov.com/">Nokov Motion Capture</a></p>
 <h2 id="主要特点">主要特点</h2>
 <ul>
 <li><strong>高精度光学捕捉</strong>：采用多摄像头布局与主动标记技术，实现亚毫米级的六自由度 (6DoF) 数据追踪和姿态捕捉技术。</li>
@@ -205,12 +205,39 @@
 <li><strong>开放性与软件兼容性</strong>：提供专门定制的SDK，可与C#、Python、LabVIEW、MATLAB等编程语言进行数据通信，可接入Unity、Unreal等软件应用，支持VRPN等各类数据传输协议，支持各类通用及专用操作系统平台</li>
 <li><strong>用途广泛</strong>: 提供多样的人体动作和机械动力学数据，适用于机器人、无人机、机械仿生、运动分析、人机交互等多种研究。</li>
 </ul>
+<h2 id="设备型号与参数概览">设备型号与参数概览</h2>
+<p>实验室当前使用的动作捕捉相机型号为 <code>Mars4H</code>。根据设备参数图，其关键规格包括：</p>
+<ul>
+<li><strong>像素大小</strong>：4M</li>
+<li><strong>分辨率</strong>：2048 × 2048</li>
+<li><strong>最高帧率</strong>：180 fps</li>
+<li><strong>部分分辨率下帧率</strong>：2048 × 1512 @ 240 fps、2048 × 720 @ 500 fps、2048 × 416 @ 800 fps、2048 × 152 @ 2000 fps</li>
+<li><strong>曝光类型</strong>：global</li>
+<li><strong>精度</strong>：±0.1 mm</li>
+<li><strong>观测距离（以 15 mm Marker 进行测试）</strong>：32 m</li>
+<li><strong>支持主动标记点</strong>：是</li>
+<li><strong>镜头接口规格</strong>：12 mm</li>
+<li><strong>视场角</strong>：52° × 52°</li>
+<li><strong>光圈/对焦可调</strong>：是</li>
+<li><strong>环灯数量</strong>：22</li>
+<li><strong>环灯类型</strong>：HLED</li>
+<li><strong>波段类型</strong>：850 nm</li>
+<li><strong>接口类型</strong>：GigE / PoE</li>
+<li><strong>功率</strong>：18 W</li>
+<li><strong>同步接口</strong>：3.5 mm AUX</li>
+<li><strong>外形尺寸</strong>：126 × 140.5 × 142 mm</li>
+<li><strong>重量</strong>：1.3 kg</li>
+<li><strong>安装孔</strong>：1/4&quot;</li>
+<li><strong>环境温度</strong>：-20℃ 到 65℃</li>
+<li><strong>环境湿度</strong>：&lt; 80%</li>
+</ul>
 <h2 id="平台详细介绍">平台详细介绍</h2>
 <p>Nokov 光学三维动作捕捉系统由动作捕捉镜头、镜头固定装置、镜头连接线（网线和POE分离器）、标定杆（L型、T型）、反光标记点、交换机等设备构成。系统通过排布在空间中的动作捕捉镜头，对室内空间的捕捉区域进行覆盖，并对捕捉目标上放置的反光标记点（Marker）进行三维空间位置的精确捕捉，通过先进算法进行处理和运算，系统可得到不同时间计量单位上各个反光标记点的三维空间坐标(X，Y，Z)；也可对目标物进行刚体设置，通过XINGYING软件对数据进一步处理和运算，可得到目标物体精确位置、速度、加速度及姿态等三维数据。软件可以录制导出刚体相关运动数据，便于实验分析验证；还可以将数据通过VRPN等协议实时发送至局域网，便于控制算法的开发运行。</p>
 <figure>
   <img src="/img/gallery/equipment/nokov_motion_capture_1.png" alt="系统组成">
   <figcaption>图1 部分系统组成</figcaption>
 </figure>
+
         </div>
 
         
