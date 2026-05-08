@@ -3,7 +3,7 @@
   <!-- 简洁首页内容 -->
   <div class="container home-sections-container">
     
-    <!-- 第一行：新闻动态和招聘启事 -->
+    <!-- 第一行：新闻动态和通知公告 -->
     <div class="home-row-1">
       
       <!-- 新闻动态 -->
@@ -13,7 +13,7 @@
           <a href="/news/" class="more-link-clean">更多</a>
         </div>
         <div class="section-content-clean">
-          {{ $news := where .Site.RegularPages "Type" "news" }}
+          {{ $news := (where .Site.RegularPages "Type" "news").ByDate.Reverse }}
           {{ if $news }}
             <!-- 第一条新闻：侧边图片布局，带简介 -->
             {{ with index $news 0 }}
@@ -35,13 +35,12 @@
             </div>
             {{ end }}
             
-            <!-- 其余新闻：只显示标题 -->
-            {{ range $index, $element := first 2 (after 1 $news) }}
+            <!-- 其余新闻：只显示标题和时间 -->
+            {{ range first 2 (after 1 $news) }}
             <div class="news-item-clean">
               <a href="{{ .RelPermalink }}" class="news-title-clean">{{ .Title }}</a>
               <span class="news-date-clean">{{ .Date.Format "2006-01-02" }}</span>
             </div>
-            {{ if lt $index 0 }}<div class="news-divider"></div>{{ end }}
             {{ end }}
           {{ else }}
             <div class="no-content-clean">暂无新闻</div>
@@ -49,10 +48,10 @@
         </div>
       </div>
 
-      <!-- 招聘启事 -->
+      <!-- 通知公告 -->
       <div class="home-section-clean">
         <div class="section-header-clean">
-          <h3>招聘启事</h3>
+          <h3>通知公告</h3>
         </div>
         <div class="section-content-clean">
           {{ range first 2 (where .Site.RegularPages "Type" "recruitment") }}
@@ -82,9 +81,10 @@
         </div>
         <div class="showcase-content-clean">
           <div class="showcase-grid-clean">
-            {{ range first 4 (where .Site.RegularPages "Type" "showcase") }}
+            {{ $featuredGallery := where (where .Site.RegularPages "Type" "gallery") "File.BaseFileName" "in" (slice "nokov_motion_capture" "crazyflie" "ackerman_car" "nvidia_pro_6000") }}
+            {{ range $featuredGallery.ByDate.Reverse }}
             <div class="showcase-item-clean">
-              <a href="{{ .Params.link }}">
+              <a href="{{ .RelPermalink }}">
                 {{ if .Params.image }}
                 <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="showcase-image-clean">
                 {{ else }}
@@ -101,6 +101,17 @@
       </div>
     </div>
 
+    <!-- 第三行：其他 -->
+    <div class="home-row-2">
+      <div class="showcase-clean">
+        <div class="showcase-header-clean">
+          <h3>其他</h3>
+        </div>
+        <div class="showcase-content-clean">
+          <div class="no-content-clean">内容待补充</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 {{ end }}
-
