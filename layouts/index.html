@@ -81,7 +81,7 @@
         </div>
         <div class="showcase-content-clean">
           <div class="showcase-grid-clean">
-            {{ $featuredGallery := where (where .Site.RegularPages "Type" "gallery") "File.BaseFileName" "in" (slice "nokov_motion_capture" "crazyflie" "ackerman_car" "nvidia_pro_6000") }}
+            {{ $featuredGallery := where (where .Site.RegularPages "Type" "gallery") "File.BaseFileName" "in" (slice "g1_robot" "nokov_motion_capture" "crazyflie" "nvidia_pro_6000") }}
             {{ range $featuredGallery.ByDate.Reverse }}
             <div class="showcase-item-clean">
               <a href="{{ .RelPermalink }}">
