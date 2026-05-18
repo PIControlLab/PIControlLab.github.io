@@ -6,8 +6,15 @@
     <description>Recent content in 基础展示 on PI-Control lab</description>
     <generator>Hugo</generator>
     <language>zh-us</language>
-    <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://PIControlLab.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>宇树 G1 人形机器人 (23DOF教育版)</title>
+      <link>https://PIControlLab.github.io/gallery/g1_robot/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://PIControlLab.github.io/gallery/g1_robot/</guid>
+      <description>&lt;p&gt;宇树 G1 是一款23自由度的通用人形机器人教育平台，提供丰富的软硬件开发接口，适用于具身智能、强化学习和人形机器人运动控制等方向的科研与实验教学。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Nokov运动捕捉系统</title>
       <link>https://PIControlLab.github.io/gallery/nokov_motion_capture/</link>
