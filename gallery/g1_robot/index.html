@@ -199,289 +199,289 @@
             <p>宇树 G1 是一款23自由度的通用人形机器人教育平台，提供丰富的软硬件开发接口，适用于具身智能、强化学习和人形机器人运动控制等方向的科研与实验教学。</p>
 <h2 id="基本参数">基本参数</h2>
 <table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>值</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>产品名称</strong></td>
-          <td>Unitree G1</td>
-      </tr>
-      <tr>
-          <td><strong>总自由度 (关节电机)</strong></td>
-          <td>23</td>
-      </tr>
-      <tr>
-          <td><strong>带电池重量</strong></td>
-          <td>约 35kg</td>
-      </tr>
-      <tr>
-          <td><strong>高宽厚 (站立)</strong></td>
-          <td>1320 × 450 × 200 mm</td>
-      </tr>
-      <tr>
-          <td><strong>续航时间</strong></td>
-          <td>约 2 小时</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>参数</th>
+					<th>值</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>产品名称</strong></td>
+					<td>Unitree G1</td>
+			</tr>
+			<tr>
+					<td><strong>总自由度 (关节电机)</strong></td>
+					<td>23</td>
+			</tr>
+			<tr>
+					<td><strong>带电池重量</strong></td>
+					<td>约 35kg</td>
+			</tr>
+			<tr>
+					<td><strong>高宽厚 (站立)</strong></td>
+					<td>1320 × 450 × 200 mm</td>
+			</tr>
+			<tr>
+					<td><strong>续航时间</strong></td>
+					<td>约 2 小时</td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="关节配置-23-dof">关节配置 (23 DOF)</h2>
 <h3 id="自由度分布">自由度分布</h3>
 <table>
-  <thead>
-      <tr>
-          <th>部位</th>
-          <th>自由度数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>腿</strong></td>
-          <td>6 × 2 = 12</td>
-          <td>左右腿各6个自由度</td>
-      </tr>
-      <tr>
-          <td><strong>腰部</strong></td>
-          <td>1</td>
-          <td>腰部yaw旋转</td>
-      </tr>
-      <tr>
-          <td><strong>单臂</strong></td>
-          <td>5 × 2 = 10</td>
-          <td>左右臂各5个自由度</td>
-      </tr>
-      <tr>
-          <td><strong>单手</strong></td>
-          <td>0</td>
-          <td>23DOF版本不带灵巧手</td>
-      </tr>
-      <tr>
-          <td><strong>总计</strong></td>
-          <td><strong>23</strong></td>
-          <td></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>部位</th>
+					<th>自由度数</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>腿</strong></td>
+					<td>6 × 2 = 12</td>
+					<td>左右腿各6个自由度</td>
+			</tr>
+			<tr>
+					<td><strong>腰部</strong></td>
+					<td>1</td>
+					<td>腰部yaw旋转</td>
+			</tr>
+			<tr>
+					<td><strong>单臂</strong></td>
+					<td>5 × 2 = 10</td>
+					<td>左右臂各5个自由度</td>
+			</tr>
+			<tr>
+					<td><strong>单手</strong></td>
+					<td>0</td>
+					<td>23DOF版本不带灵巧手</td>
+			</tr>
+			<tr>
+					<td><strong>总计</strong></td>
+					<td><strong>23</strong></td>
+					<td></td>
+			</tr>
+	</tbody>
 </table>
 <h3 id="腿部关节-12-dof">腿部关节 (12 DOF)</h3>
 <table>
-  <thead>
-      <tr>
-          <th>编号</th>
-          <th>URDF 关节名称</th>
-          <th>关节中文名称</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>0</td>
-          <td>left_hip_pitch_joint</td>
-          <td>左髋关节 Pitch (前后)</td>
-      </tr>
-      <tr>
-          <td>1</td>
-          <td>left_hip_roll_joint</td>
-          <td>左髋关节 Roll (内外)</td>
-      </tr>
-      <tr>
-          <td>2</td>
-          <td>left_hip_yaw_joint</td>
-          <td>左髋关节 Yaw (水平)</td>
-      </tr>
-      <tr>
-          <td>3</td>
-          <td>left_knee_joint</td>
-          <td>左膝关节</td>
-      </tr>
-      <tr>
-          <td>4</td>
-          <td>left_ankle_pitch_joint</td>
-          <td>左踝关节 Pitch (前后)</td>
-      </tr>
-      <tr>
-          <td>5</td>
-          <td>left_ankle_roll_joint</td>
-          <td>左踝关节 Roll (内外)</td>
-      </tr>
-      <tr>
-          <td>6</td>
-          <td>right_hip_pitch_joint</td>
-          <td>右髋关节 Pitch (前后)</td>
-      </tr>
-      <tr>
-          <td>7</td>
-          <td>right_hip_roll_joint</td>
-          <td>右髋关节 Roll (内外)</td>
-      </tr>
-      <tr>
-          <td>8</td>
-          <td>right_hip_yaw_joint</td>
-          <td>右髋关节 Yaw (水平)</td>
-      </tr>
-      <tr>
-          <td>9</td>
-          <td>right_knee_joint</td>
-          <td>右膝关节</td>
-      </tr>
-      <tr>
-          <td>10</td>
-          <td>right_ankle_pitch_joint</td>
-          <td>右踝关节 Pitch (前后)</td>
-      </tr>
-      <tr>
-          <td>11</td>
-          <td>right_ankle_roll_joint</td>
-          <td>右踝关节 Roll (内外)</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>编号</th>
+					<th>URDF 关节名称</th>
+					<th>关节中文名称</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>0</td>
+					<td>left_hip_pitch_joint</td>
+					<td>左髋关节 Pitch (前后)</td>
+			</tr>
+			<tr>
+					<td>1</td>
+					<td>left_hip_roll_joint</td>
+					<td>左髋关节 Roll (内外)</td>
+			</tr>
+			<tr>
+					<td>2</td>
+					<td>left_hip_yaw_joint</td>
+					<td>左髋关节 Yaw (水平)</td>
+			</tr>
+			<tr>
+					<td>3</td>
+					<td>left_knee_joint</td>
+					<td>左膝关节</td>
+			</tr>
+			<tr>
+					<td>4</td>
+					<td>left_ankle_pitch_joint</td>
+					<td>左踝关节 Pitch (前后)</td>
+			</tr>
+			<tr>
+					<td>5</td>
+					<td>left_ankle_roll_joint</td>
+					<td>左踝关节 Roll (内外)</td>
+			</tr>
+			<tr>
+					<td>6</td>
+					<td>right_hip_pitch_joint</td>
+					<td>右髋关节 Pitch (前后)</td>
+			</tr>
+			<tr>
+					<td>7</td>
+					<td>right_hip_roll_joint</td>
+					<td>右髋关节 Roll (内外)</td>
+			</tr>
+			<tr>
+					<td>8</td>
+					<td>right_hip_yaw_joint</td>
+					<td>右髋关节 Yaw (水平)</td>
+			</tr>
+			<tr>
+					<td>9</td>
+					<td>right_knee_joint</td>
+					<td>右膝关节</td>
+			</tr>
+			<tr>
+					<td>10</td>
+					<td>right_ankle_pitch_joint</td>
+					<td>右踝关节 Pitch (前后)</td>
+			</tr>
+			<tr>
+					<td>11</td>
+					<td>right_ankle_roll_joint</td>
+					<td>右踝关节 Roll (内外)</td>
+			</tr>
+	</tbody>
 </table>
 <h3 id="手臂关节-10-dof">手臂关节 (10 DOF)</h3>
 <table>
-  <thead>
-      <tr>
-          <th>编号</th>
-          <th>URDF 关节名称</th>
-          <th>关节中文名称</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>15</td>
-          <td>left_shoulder_pitch_joint</td>
-          <td>左肩关节 Pitch (前后)</td>
-      </tr>
-      <tr>
-          <td>16</td>
-          <td>left_shoulder_roll_joint</td>
-          <td>左肩关节 Roll (内外)</td>
-      </tr>
-      <tr>
-          <td>17</td>
-          <td>left_shoulder_yaw_joint</td>
-          <td>左肩关节 Yaw (水平)</td>
-      </tr>
-      <tr>
-          <td>18</td>
-          <td>left_elbow_joint</td>
-          <td>左肘关节</td>
-      </tr>
-      <tr>
-          <td>19</td>
-          <td>left_wrist_roll_joint</td>
-          <td>左腕关节 Roll</td>
-      </tr>
-      <tr>
-          <td>22</td>
-          <td>right_shoulder_pitch_joint</td>
-          <td>右肩关节 Pitch (前后)</td>
-      </tr>
-      <tr>
-          <td>23</td>
-          <td>right_shoulder_roll_joint</td>
-          <td>右肩关节 Roll (内外)</td>
-      </tr>
-      <tr>
-          <td>24</td>
-          <td>right_shoulder_yaw_joint</td>
-          <td>右肩关节 Yaw (水平)</td>
-      </tr>
-      <tr>
-          <td>25</td>
-          <td>right_elbow_joint</td>
-          <td>右肘关节</td>
-      </tr>
-      <tr>
-          <td>26</td>
-          <td>right_wrist_roll_joint</td>
-          <td>右腕关节 Roll</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>编号</th>
+					<th>URDF 关节名称</th>
+					<th>关节中文名称</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>15</td>
+					<td>left_shoulder_pitch_joint</td>
+					<td>左肩关节 Pitch (前后)</td>
+			</tr>
+			<tr>
+					<td>16</td>
+					<td>left_shoulder_roll_joint</td>
+					<td>左肩关节 Roll (内外)</td>
+			</tr>
+			<tr>
+					<td>17</td>
+					<td>left_shoulder_yaw_joint</td>
+					<td>左肩关节 Yaw (水平)</td>
+			</tr>
+			<tr>
+					<td>18</td>
+					<td>left_elbow_joint</td>
+					<td>左肘关节</td>
+			</tr>
+			<tr>
+					<td>19</td>
+					<td>left_wrist_roll_joint</td>
+					<td>左腕关节 Roll</td>
+			</tr>
+			<tr>
+					<td>22</td>
+					<td>right_shoulder_pitch_joint</td>
+					<td>右肩关节 Pitch (前后)</td>
+			</tr>
+			<tr>
+					<td>23</td>
+					<td>right_shoulder_roll_joint</td>
+					<td>右肩关节 Roll (内外)</td>
+			</tr>
+			<tr>
+					<td>24</td>
+					<td>right_shoulder_yaw_joint</td>
+					<td>右肩关节 Yaw (水平)</td>
+			</tr>
+			<tr>
+					<td>25</td>
+					<td>right_elbow_joint</td>
+					<td>右肘关节</td>
+			</tr>
+			<tr>
+					<td>26</td>
+					<td>right_wrist_roll_joint</td>
+					<td>右腕关节 Roll</td>
+			</tr>
+	</tbody>
 </table>
 <h3 id="腰部关节-1-dof">腰部关节 (1 DOF)</h3>
 <table>
-  <thead>
-      <tr>
-          <th>编号</th>
-          <th>URDF 关节名称</th>
-          <th>关节中文名称</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>12</td>
-          <td>waist_yaw_joint</td>
-          <td>腰部 Yaw (水平旋转)</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>编号</th>
+					<th>URDF 关节名称</th>
+					<th>关节中文名称</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>12</td>
+					<td>waist_yaw_joint</td>
+					<td>腰部 Yaw (水平旋转)</td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="传感器配置">传感器配置</h2>
 <h3 id="感知传感器">感知传感器</h3>
 <table>
-  <thead>
-      <tr>
-          <th>传感器</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>深度相机</strong></td>
-          <td>用于视觉感知和障碍物检测</td>
-      </tr>
-      <tr>
-          <td><strong>3D 激光雷达 (LiDAR)</strong></td>
-          <td>用于SLAM导航和环境建图</td>
-      </tr>
-      <tr>
-          <td><strong>4麦克风阵列</strong></td>
-          <td>用于语音交互和声源定位</td>
-      </tr>
-      <tr>
-          <td><strong>5W 扬声器</strong></td>
-          <td>用于音频播放和语音反馈</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>传感器</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>深度相机</strong></td>
+					<td>用于视觉感知和障碍物检测</td>
+			</tr>
+			<tr>
+					<td><strong>3D 激光雷达 (LiDAR)</strong></td>
+					<td>用于SLAM导航和环境建图</td>
+			</tr>
+			<tr>
+					<td><strong>4麦克风阵列</strong></td>
+					<td>用于语音交互和声源定位</td>
+			</tr>
+			<tr>
+					<td><strong>5W 扬声器</strong></td>
+					<td>用于音频播放和语音反馈</td>
+			</tr>
+	</tbody>
 </table>
 <h3 id="内部传感器">内部传感器</h3>
 <table>
-  <thead>
-      <tr>
-          <th>传感器</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>双编码器</strong></td>
-          <td>每个关节电机配备双编码器，提高控制精度</td>
-      </tr>
-      <tr>
-          <td><strong>IMU (惯性测量单元)</strong></td>
-          <td>用于姿态估计和运动控制</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>传感器</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>双编码器</strong></td>
+					<td>每个关节电机配备双编码器，提高控制精度</td>
+			</tr>
+			<tr>
+					<td><strong>IMU (惯性测量单元)</strong></td>
+					<td>用于姿态估计和运动控制</td>
+			</tr>
+	</tbody>
 </table>
 <h3 id="通信模块">通信模块</h3>
 <table>
-  <thead>
-      <tr>
-          <th>模块</th>
-          <th>规格</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>WiFi</strong></td>
-          <td>WiFi6</td>
-      </tr>
-      <tr>
-          <td><strong>蓝牙</strong></td>
-          <td>蓝牙 5.2</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>模块</th>
+					<th>规格</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>WiFi</strong></td>
+					<td>WiFi6</td>
+			</tr>
+			<tr>
+					<td><strong>蓝牙</strong></td>
+					<td>蓝牙 5.2</td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="开发资源">开发资源</h2>
 <ul>
@@ -516,6 +516,10 @@
 <blockquote>
 <p><strong>视频说明</strong>: G1 机器人舞蹈演示</p>
 </blockquote>
+<h2 id="相关研究">相关研究</h2>
+<ul>
+<li><a href="/research/rl-humanoid-locomotion/">基于强化学习的人形机器人运动控制研究</a> — 基于本平台完成的平地行走与动作模仿控制研究，含 sim-to-real 部署验证。</li>
+</ul>
 
         </div>
 

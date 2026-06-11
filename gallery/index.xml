@@ -1,47 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>基础展示 on PI-Control lab</title>
-    <link>https://PIControlLab.github.io/gallery/</link>
-    <description>Recent content in 基础展示 on PI-Control lab</description>
-    <generator>Hugo</generator>
-    <language>zh-us</language>
-    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://PIControlLab.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>宇树 G1 人形机器人 (23DOF教育版)</title>
-      <link>https://PIControlLab.github.io/gallery/g1_robot/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://PIControlLab.github.io/gallery/g1_robot/</guid>
-      <description>&lt;p&gt;宇树 G1 是一款23自由度的通用人形机器人教育平台，提供丰富的软硬件开发接口，适用于具身智能、强化学习和人形机器人运动控制等方向的科研与实验教学。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nokov运动捕捉系统</title>
-      <link>https://PIControlLab.github.io/gallery/nokov_motion_capture/</link>
-      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://PIControlLab.github.io/gallery/nokov_motion_capture/</guid>
-      <description>&lt;p&gt;本平台是一套为机器人与人体动作研究、控制算法开发与实验验证设计的高精度光学动作捕捉系统实验平台，包含18颗高精度动作捕捉镜头和一套动作捕捉与分析软件。系统采用 Nokov 的 &lt;code&gt;Mars4H&lt;/code&gt; 型动作捕捉相机，可用于刚体位姿获取、轨迹记录、协同控制实验与高精度运动分析。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>英伟达显卡 RTX PRO 6000</title>
-      <link>https://PIControlLab.github.io/gallery/nvidia_pro_6000/</link>
-      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://PIControlLab.github.io/gallery/nvidia_pro_6000/</guid>
-      <description>&lt;p&gt;本工作站专为高性能 AI 训练、3D 渲染与科学计算设计，配备双 NVIDIA RTX PRO 6000 Blackwell GPU 与双路 Intel Xeon 处理器，提供强大的并行计算能力。&lt;/p&gt;&#xA;&lt;h2 id=&#34;-硬件配置&#34;&gt;🔧 硬件配置&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-主板&#34;&gt;🖥️ 主板&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;：Supermicro Super Server&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：支持多 GPU、高内存带宽、企业级稳定性&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-内存&#34;&gt;💾 内存&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;容量&lt;/strong&gt;：256 GiB（32 GiB × 8）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;：MTA36ASF4G72PZ – 32GB DDR4 RDIMM（ECC）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;规格书&lt;/strong&gt;：&lt;a href=&#34;https://www.digikey.cn/zh/htmldatasheets/production/1959036/0/0/1/mta36asf4g72pz&#34;&gt;MTA36ASF4G72PZ | DigiKey&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-处理器&#34;&gt;⚙️ 处理器&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;：Intel® Xeon® Platinum 8368Q × 2&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;频率&lt;/strong&gt;：2.60 GHz（基础）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;核心/线程&lt;/strong&gt;：38 核 / 76 线程（每颗）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-显卡&#34;&gt;🎮 显卡&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;：NVIDIA RTX PRO 6000 Blackwell × 2&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;显存&lt;/strong&gt;：96 GB GDDR7（每卡）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：AI 推理、3D 渲染、实时光线追踪&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;官方详情&lt;/strong&gt;：&lt;a href=&#34;https://www.nvidia.com/zh-tw/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/&#34;&gt;NVIDIA RTX PRO 6000 Blackwell&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-存储&#34;&gt;💽 存储&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;系统盘&lt;/strong&gt;：1 TB WD_BLACK SN7100（NVMe SSD）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;数据盘&lt;/strong&gt;：6 TB Seagate ST6000NM019B（企业级 HDD）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;总容量&lt;/strong&gt;：7 TB&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;硬盘链接&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.westerndigital.com/&#34;&gt;WD_BLACK SN7100&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.hchdd.net/productinfo/2988309.html&#34;&gt;ST6000NM019B | 希捷企业官网&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-操作系统&#34;&gt;🐧 操作系统&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;发行版&lt;/strong&gt;：Ubuntu 24.04 LTS&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;内核&lt;/strong&gt;：Linux 6.x（默认）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;预装环境&lt;/strong&gt;：CUDA 12.x, Docker, ROS 2&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;-应用场景&#34;&gt;📌 应用场景&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;大模型训练与微调&lt;/li&gt;&#xA;&lt;li&gt;实时 3D 可视化仿真&lt;/li&gt;&#xA;&lt;li&gt;计算流体力学（CFD）模拟&lt;/li&gt;&#xA;&lt;li&gt;自动驾驶算法验证平台&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Crazyflie 2.1&#43;</title>
-      <link>https://PIControlLab.github.io/gallery/crazyflie/</link>
-      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://PIControlLab.github.io/gallery/crazyflie/</guid>
-      <description>&lt;p&gt;Crazyflie2.1是一个多功能的开源微型无人机平台，能够支持从简单飞行到复杂任务的多种应用。通过与ROS2的结合，它可以实现精准的自动飞行、群体协同控制以及自主飞行任务。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>阿克曼底盘小车</title>
-      <link>https://PIControlLab.github.io/gallery/ackerman_car/</link>
-      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://PIControlLab.github.io/gallery/ackerman_car/</guid>
-      <description>&lt;p&gt;本平台是一款为控制算法工程化验证而设计的阿克曼底盘移动机器人实验平台，采用模块化硬件与分层控制架构，为算法研发与落地提供标准化硬件载体。&lt;/p&gt;&#xA;&lt;h2 id=&#34;主要特点&#34;&gt;主要特点：&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;模块化与可扩展设计&lt;/strong&gt;：硬件与软件层均采用模块化架构，便于快速迭代、功能替换与系统升级。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;分层协同控制架构&lt;/strong&gt;：采用决策层+执行层的分层设计，实现智能决策与稳定执行的有机结合。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;实时可靠通信链路&lt;/strong&gt;：通过MAVLink协议与MAVROS接口，确保决策层与执行层间指令与状态数据的低延迟、高可靠交互。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;灵活算法验证平台&lt;/strong&gt;：全面支持各类运动规划、跟踪控制及融合算法的实测验证，支持从理论仿真到实物落地的转化过程。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;平台详细介绍&#34;&gt;平台详细介绍：&lt;/h2&gt;&#xA;&lt;p&gt;为解决移动机器人控制算法工程化落地中的硬件适配难题，我们自主设计搭建了一套阿克曼底盘移动机器人实验平台，兼具可靠性能与模块化设计，为先进控制算法的验证与迭代提供硬件支撑与标准化实验载体。&#xA;机载工控机Jetson Orin Nano部署ROS2操作系统，承担路径规划、数据融合及控制指令生成等核心决策任务。飞控板Pixhawk 6C烧录Ardupilot固件采用Rover模式，负责底层电机PID闭环控制、姿态解算及失控保护机制执行，确保车辆基础运行的稳定性。平台底层硬件结构为阿克曼转向机构底盘，选型伺服舵机与直流有刷驱动电机，实现车辆转向与速度的高精度响应。轮电机配置霍尔编码器，可构建速度闭环控制链路。决策层与执行层采用MAVLink通信协议，通过MAVROS接口建立双向数据链路，实现控制指令、状态反馈等信息的实时交互，保障分层架构协同高效运行。&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>基础展示 on PI-Control lab</title>
+		<link>https://PIControlLab.github.io/gallery/</link>
+		<description>Recent content in 基础展示 on PI-Control lab</description>
+		<generator>Hugo</generator>
+		<language>zh-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://PIControlLab.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>宇树 G1 人形机器人 (23DOF教育版)</title>
+				<link>https://PIControlLab.github.io/gallery/g1_robot/</link>
+				<pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+				<guid>https://PIControlLab.github.io/gallery/g1_robot/</guid>
+				<description>&lt;p&gt;宇树 G1 是一款23自由度的通用人形机器人教育平台，提供丰富的软硬件开发接口，适用于具身智能、强化学习和人形机器人运动控制等方向的科研与实验教学。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Nokov运动捕捉系统</title>
+				<link>https://PIControlLab.github.io/gallery/nokov_motion_capture/</link>
+				<pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+				<guid>https://PIControlLab.github.io/gallery/nokov_motion_capture/</guid>
+				<description>&lt;p&gt;本平台是一套为机器人与人体动作研究、控制算法开发与实验验证设计的高精度光学动作捕捉系统实验平台，包含18颗高精度动作捕捉镜头和一套动作捕捉与分析软件。系统采用 Nokov 的 &lt;code&gt;Mars4H&lt;/code&gt; 型动作捕捉相机，可用于刚体位姿获取、轨迹记录、协同控制实验与高精度运动分析。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>英伟达显卡 RTX PRO 6000</title>
+				<link>https://PIControlLab.github.io/gallery/nvidia_pro_6000/</link>
+				<pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+				<guid>https://PIControlLab.github.io/gallery/nvidia_pro_6000/</guid>
+				<description>&lt;p&gt;本工作站专为高性能 AI 训练、3D 渲染与科学计算设计，配备双 NVIDIA RTX PRO 6000 Blackwell GPU 与双路 Intel Xeon 处理器，提供强大的并行计算能力。&lt;/p&gt;&#xA;&lt;h2 id=&#34;-硬件配置&#34;&gt;🔧 硬件配置&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-主板&#34;&gt;🖥️ 主板&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;：Supermicro Super Server&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：支持多 GPU、高内存带宽、企业级稳定性&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-内存&#34;&gt;💾 内存&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;容量&lt;/strong&gt;：256 GiB（32 GiB × 8）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;：MTA36ASF4G72PZ – 32GB DDR4 RDIMM（ECC）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;规格书&lt;/strong&gt;：&lt;a href=&#34;https://www.digikey.cn/zh/htmldatasheets/production/1959036/0/0/1/mta36asf4g72pz&#34;&gt;MTA36ASF4G72PZ | DigiKey&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-处理器&#34;&gt;⚙️ 处理器&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;：Intel® Xeon® Platinum 8368Q × 2&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;频率&lt;/strong&gt;：2.60 GHz（基础）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;核心/线程&lt;/strong&gt;：38 核 / 76 线程（每颗）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-显卡&#34;&gt;🎮 显卡&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;：NVIDIA RTX PRO 6000 Blackwell × 2&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;显存&lt;/strong&gt;：96 GB GDDR7（每卡）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：AI 推理、3D 渲染、实时光线追踪&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;官方详情&lt;/strong&gt;：&lt;a href=&#34;https://www.nvidia.com/zh-tw/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/&#34;&gt;NVIDIA RTX PRO 6000 Blackwell&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-存储&#34;&gt;💽 存储&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;系统盘&lt;/strong&gt;：1 TB WD_BLACK SN7100（NVMe SSD）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;数据盘&lt;/strong&gt;：6 TB Seagate ST6000NM019B（企业级 HDD）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;总容量&lt;/strong&gt;：7 TB&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;硬盘链接&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.westerndigital.com/&#34;&gt;WD_BLACK SN7100&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.hchdd.net/productinfo/2988309.html&#34;&gt;ST6000NM019B | 希捷企业官网&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-操作系统&#34;&gt;🐧 操作系统&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;发行版&lt;/strong&gt;：Ubuntu 24.04 LTS&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;内核&lt;/strong&gt;：Linux 6.x（默认）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;预装环境&lt;/strong&gt;：CUDA 12.x, Docker, ROS 2&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;-应用场景&#34;&gt;📌 应用场景&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;大模型训练与微调&lt;/li&gt;&#xA;&lt;li&gt;实时 3D 可视化仿真&lt;/li&gt;&#xA;&lt;li&gt;计算流体力学（CFD）模拟&lt;/li&gt;&#xA;&lt;li&gt;自动驾驶算法验证平台&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Crazyflie 2.1&#43;</title>
+				<link>https://PIControlLab.github.io/gallery/crazyflie/</link>
+				<pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+				<guid>https://PIControlLab.github.io/gallery/crazyflie/</guid>
+				<description>&lt;p&gt;Crazyflie2.1是一个多功能的开源微型无人机平台，能够支持从简单飞行到复杂任务的多种应用。通过与ROS2的结合，它可以实现精准的自动飞行、群体协同控制以及自主飞行任务。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>阿克曼底盘小车</title>
+				<link>https://PIControlLab.github.io/gallery/ackerman_car/</link>
+				<pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+				<guid>https://PIControlLab.github.io/gallery/ackerman_car/</guid>
+				<description>&lt;p&gt;本平台是一款为控制算法工程化验证而设计的阿克曼底盘移动机器人实验平台，采用模块化硬件与分层控制架构，为算法研发与落地提供标准化硬件载体。&lt;/p&gt;&#xA;&lt;h2 id=&#34;主要特点&#34;&gt;主要特点：&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;模块化与可扩展设计&lt;/strong&gt;：硬件与软件层均采用模块化架构，便于快速迭代、功能替换与系统升级。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;分层协同控制架构&lt;/strong&gt;：采用决策层+执行层的分层设计，实现智能决策与稳定执行的有机结合。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;实时可靠通信链路&lt;/strong&gt;：通过MAVLink协议与MAVROS接口，确保决策层与执行层间指令与状态数据的低延迟、高可靠交互。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;灵活算法验证平台&lt;/strong&gt;：全面支持各类运动规划、跟踪控制及融合算法的实测验证，支持从理论仿真到实物落地的转化过程。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;平台详细介绍&#34;&gt;平台详细介绍：&lt;/h2&gt;&#xA;&lt;p&gt;为解决移动机器人控制算法工程化落地中的硬件适配难题，我们自主设计搭建了一套阿克曼底盘移动机器人实验平台，兼具可靠性能与模块化设计，为先进控制算法的验证与迭代提供硬件支撑与标准化实验载体。&#xA;机载工控机Jetson Orin Nano部署ROS2操作系统，承担路径规划、数据融合及控制指令生成等核心决策任务。飞控板Pixhawk 6C烧录Ardupilot固件采用Rover模式，负责底层电机PID闭环控制、姿态解算及失控保护机制执行，确保车辆基础运行的稳定性。平台底层硬件结构为阿克曼转向机构底盘，选型伺服舵机与直流有刷驱动电机，实现车辆转向与速度的高精度响应。轮电机配置霍尔编码器，可构建速度闭环控制链路。决策层与执行层采用MAVLink通信协议，通过MAVROS接口建立双向数据链路，实现控制指令、状态反馈等信息的实时交互，保障分层架构协同高效运行。&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

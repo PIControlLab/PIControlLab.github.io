@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="PI-Control lab">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://PIControlLab.github.io///img/1681122792748811.jpg">
+    <meta property="twitter:image" content="https://PIControlLab.github.io///img/1681122792748811.jpg" />
+    
+
+    
+    <meta name="title" content="基于强化学习的人形机器人运动控制研究" />
+    <meta property="og:title" content="基于强化学习的人形机器人运动控制研究" />
+    <meta property="twitter:title" content="基于强化学习的人形机器人运动控制研究" />
+    
+
+    
+    <meta name="description" content="这里是北京理工大学自动化学院通用智能体控制与决策实验室，欢迎前来交流。">
+    <meta property="og:description" content="这里是北京理工大学自动化学院通用智能体控制与决策实验室，欢迎前来交流。" />
+    <meta property="twitter:description" content="这里是北京理工大学自动化学院通用智能体控制与决策实验室，欢迎前来交流。" />
+    
+
+    <meta property="og:url" content="https://PIControlLab.github.io/research/rl-humanoid-locomotion/" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="BIT, 北京理工大学, 北理工自动化学院 , PI-Control lab, 预测智能控制实验室, 实验室,Predictive Intelligence Control Lab">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>基于强化学习的人形机器人运动控制研究 | BIT预测智能控制实验室</title>
+
+    <link rel="canonical" href="/research/rl-humanoid-locomotion/">
+
+    
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.min.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="https://PIControlLab.github.io/css/base.css">
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+    
+    <link rel="stylesheet" href="/css/base.css">
+
+    
+
+    
+    
+
+</head>
+
+
+
+<body class="not-home">
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            <a class="navbar-brand" href="/">
+                <img class="site-logo" src="/logo.png" alt="PI-Control lab">
+            </a>
+            
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                    
+                        
+                    
+                    
+		    
+                        <li><a href="/news//">新闻</a></li>
+                    
+                        <li><a href="/member//">成员</a></li>
+                    
+                        <li><a href="/research//">研究</a></li>
+                    
+                        <li><a href="/projects//">项目 </a></li>
+                    
+                        <li><a href="/papers//">论文</a></li>
+                    
+                        <li><a href="/gallery//">展示</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+<div class="project-detail-container">
+    <article class="project-article">
+        <header class="project-header">
+            <nav class="project-breadcrumb">
+                <a href="/research/">研究项目</a> / <span>基于强化学习的人形机器人运动控制研究</span>
+            </nav>
+            <h1 class="project-title">基于强化学习的人形机器人运动控制研究</h1>
+            <div class="project-meta">
+                
+                <span class="research-area">研究方向: RL</span>
+                
+                
+                <span class="publish-date">发布时间: 2026年6月11日</span>
+                
+                
+                <span class="contributor">主要完成人：刘相卿</span>
+                
+            </div>
+        </header>
+
+        
+
+        <div class="project-content">
+            <h2 id="项目概述">项目概述</h2>
+<p>本项目围绕人形机器人运动控制问题展开，研究对象为宇树G1人形机器人，主要目标是利用强化学习方法实现较为稳定、自然的平地行走控制，并进一步探索面向23自由度机器人模型的动作模仿控制。项目基于IsaacLab、Unitree RL Lab和MuJoCo等仿真平台完成训练、测试与迁移验证，重点关注奖励函数设计、机器人模型适配以及仿真到仿真的控制效果验证。</p>
+<div style="text-align:center;">
+  <video src="/video/projects/rl-humanoid/locomotion.mp4" controls width="100%" style="max-width:800px;"></video>
+  <p style="text-align:center;"><b>locomotion</b></p>
+</div>
+<h2 id="研究背景与目标">研究背景与目标</h2>
+<p>人形机器人具有接近人类的身体结构，能够适应为人类设计的复杂环境，因此在服务机器人、工业协作和具身智能等方向具有重要应用价值。然而，由于人形机器人自由度高、动力学耦合强、平衡控制难度大，其运动控制仍然是一个具有挑战性的问题。传统控制方法通常依赖较强的人工建模与参数调节，而强化学习能够通过机器人与环境的交互自动学习控制策略，因此逐渐成为人形机器人运动控制中的重要方法。</p>
+<p>本项目主要围绕两个研究任务展开：一是基于IsaacLab平台训练G1人形机器人完成平地行走；二是基于Unitree RL Lab对23自由度G1模型进行动作模仿控制适配。研究重点在于结合具体机器人结构和任务需求，对训练环境、奖励函数和模型配置进行改进，使控制策略在步态自然性、稳定性和动作跟踪效果上得到提升。</p>
+<h2 id="方法与系统设计">方法与系统设计</h2>
+<p>在平地行走研究中，项目采用PPO作为核心强化学习算法。训练过程基于IsaacLab构建仿真环境，由环境提供机器人观测、动作空间、奖励函数和终止条件，并通过rsl_rl完成策略网络训练。针对训练过程中出现的高频碎步、摆臂不足和步态不自然等问题，项目在原有奖励项基础上设计了辅助奖励函数，包括步频惩罚、左右脚空中时间不对称惩罚以及髋膝关节不对称惩罚，用于引导机器人形成更自然、更稳定的步态。</p>
+<p>在动作模仿控制研究中，项目基于Unitree RL Lab对官方G1模型进行23自由度适配。由于实际使用的机器人模型缺少部分腰部和腕部自由度，项目需要重新整理关节映射、动作数据格式和末端身体部位配置，使参考动作能够正确作用于目标机器人模型。在此基础上，进一步针对模仿训练中出现的支撑不稳定和躯干姿态偏移问题，加入基座姿态约束和左右脚承载平衡等辅助奖励项，提高动作模仿过程中的稳定性。</p>
+<p>最后，从单仿真器IsaacLab到异构仿真器MuJoCo、对两种策略进行跨仿真器验证，最后部署宇树G1实机，完成sim-to-real。</p>
+<div style="text-align:center;">
+  <img src="/img/projects/rl-humanoid/0.png" alt="技术路线" style="max-width:100%;height:auto;">
+  <p style="text-align:center;"><b>技术路线</b></p>
+</div>
+<h2 id="实验结果与视频展示">实验结果与视频展示</h2>
+<p>平地行走实验表明，经过奖励函数调整后，机器人步态频率明显降低，高频碎步现象得到缓解；同时，机器人在行走过程中躯干姿态更加稳定，摆臂幅度有所增加，整体运动效果更加自然。相比原始训练结果，优化后的策略在速度跟踪误差、身体倾斜程度和步态对称性方面均表现出更好的综合效果。</p>
+<div style="text-align:center;">
+  <img src="/img/projects/rl-humanoid/1.png" alt="平地行走策略指标对比图" style="max-width:60%;height:auto;">
+  <p style="text-align:center;"><b>平地行走策略指标对比图</b></p>
+</div>
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <video src="/video/projects/rl-humanoid/baseline.mp4" controls width="100%"></video>
+      <br>
+      <b>baseline</b>
+    </td>
+    <td align="center" width="50%">
+      <video src="/video/projects/rl-humanoid/improved.mp4" controls width="100%"></video>
+      <br>
+      <b>improved</b>
+    </td>
+  </tr>
+</table>
+<p>在动作模仿实验中，23自由度模型能够较好地跟踪参考动作，并在MuJoCo仿真环境中完成动作回放。经过模型适配和辅助奖励函数优化后，机器人左腿支撑不稳、身体偏移等问题得到改善，动作模仿过程更加稳定，说明所设计的模型适配方案和奖励改进具有一定有效性。</p>
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <video src="/video/projects/rl-humanoid/102baseline.mp4" controls width="100%"></video>
+      <br>
+      <b>baseline</b>
+    </td>
+    <td align="center" width="50%">
+      <video src="/video/projects/rl-humanoid/102improved.mp4" controls width="100%"></video>
+      <br>
+      <b>improved</b>
+    </td>
+  </tr>
+</table>
+<p>sim-to-sim验证在本文研究中不仅是实机部署前的安全测试环节，也是发现策略隐藏问题的重要手段。对于平地行走研究，它主要用于确认策略在异构仿真器中的稳定性；对于动作模仿控制研究，它还进一步暴露了训练阶段不易观察到的支撑不稳定和动作协调问题。得益于控制器与仿真器的解耦运行，通过这种逐级验证流程，最终完成了两类人形机器人运动控制策略的sim-to-real部署验证。</p>
+<div style="text-align:center;">
+  <video src="/video/projects/rl-humanoid/locomotion.mp4" controls width="100%" style="max-width:800px;"></video>
+  <p style="text-align:center;"><b>locomotion</b></p>
+</div>
+<div style="text-align:center;">
+  <video src="/video/projects/rl-humanoid/mimic.mp4" controls width="100%" style="max-width:800px;"></video>
+  <p style="text-align:center;"><b>mimic</b></p>
+</div>
+<h2 id="总结与展望">总结与展望</h2>
+<p>本项目完成了基于强化学习的人形机器人平地行走控制与动作模仿控制研究，构建了从训练环境搭建、奖励函数改进、23自由度模型适配到仿真测试验证的完整流程。实验结果表明，结合机器人结构特点设计辅助奖励函数，能够有效改善步态自然性和控制稳定性。后续工作可进一步面向复杂地形、外部扰动和真实机器人部署开展研究，提高控制策略在真实环境中的鲁棒性与泛化能力。</p>
+
+        </div>
+
+        <footer class="project-footer">
+            <a href="/research/" class="back-to-research">返回</a>
+        </footer>
+    </article>
+</div>
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             
+		<p class="copyright text-muted">
+                    
+                        <span class="contact-info">联系方式：PIControlLab@163.com</span>
+                    
+                    <br>
+                    版权所有 © PI-Control lab 2026
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow" title="' + t + '">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>
